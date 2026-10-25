@@ -146,8 +146,8 @@ export default function ContactPage() {
                 },
                 {
                   icon: Phone, color: '#b87816',
-                  label: 'Phone Numbers',
-                  value: `${COMPANY_INFO.phonePrimary}  /  ${COMPANY_INFO.phoneSecondary}`,
+                  label: 'Phone Number',
+                  value: COMPANY_INFO.phonePrimary,
                   href: `tel:${COMPANY_INFO.phonePrimary.replace(/\s/g, '')}`
                 },
                 {
@@ -545,16 +545,16 @@ export default function ContactPage() {
                   fontSize: '1rem', textDecoration: 'none',
                   display: 'inline-flex', alignItems: 'center', gap: '0.5rem'
                 }}>
-                <Phone size={18} /> {COMPANY_INFO.phonePrimary}
+                <Phone size={18} /> Call {COMPANY_INFO.phonePrimary}
               </a>
-              <a href={`tel:${COMPANY_INFO.phoneSecondary.replace(/\s/g, '')}`}
+              <a href={`mailto:${COMPANY_INFO.email}`}
                 style={{
                   padding: '0.9rem 2rem', borderRadius: '8px',
                   background: 'rgba(255,255,255,0.15)', color: '#fff', fontWeight: '700',
                   fontSize: '1rem', textDecoration: 'none', border: '2px solid rgba(255,255,255,0.5)',
                   display: 'inline-flex', alignItems: 'center', gap: '0.5rem'
                 }}>
-                <Phone size={18} /> {COMPANY_INFO.phoneSecondary}
+                <Mail size={18} /> Email Us
               </a>
             </div>
           </div>

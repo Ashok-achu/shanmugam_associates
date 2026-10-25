@@ -3,9 +3,8 @@ export const COMPANY_INFO = {
   tagline: "Construction Redefined...",
   since: "1977",
   experienceYears: "Nearly 50 Years",
-  phone: "94435 22285 / 81100 00757",
+  phone: "94435 22285",
   phonePrimary: "94435 22285",
-  phoneSecondary: "81100 00757",
   email: "associatesshanmugam@gmail.com",
   website: "www.associatesshanmugam.in",
   address: "No.5, Ground Floor, First Portion, Mariamman Kovil Street, Bommanapalayam, Vadavalli, Coimbatore – 641041, Tamil Nadu",
@@ -177,7 +176,7 @@ export const HOME_FAQS = [
   },
   {
     q: "How can I get started with my project?",
-    a: "Simply call us at 94435 22285 / 81100 00757 or send your project details. Our team will arrange a site visit, understand your requirements, and provide a detailed quotation."
+    a: "Simply call us at 94435 22285 or send your project details. Our team will arrange a site visit, understand your requirements, and provide a detailed quotation."
   }
 ];
 

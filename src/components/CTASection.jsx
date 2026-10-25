@@ -81,7 +81,7 @@ export default function CTASection() {
           </p>
 
           <div style={{ fontSize: '0.88rem', color: '#64748b', fontWeight: '600' }}>
-            📞 94435 22285 / 81100 00757 &nbsp;•&nbsp; ✉️ associatesshanmugam@gmail.com
+            📞 94435 22285 &nbsp;•&nbsp; ✉️ associatesshanmugam@gmail.com
           </div>
 
           {/* Button group */}

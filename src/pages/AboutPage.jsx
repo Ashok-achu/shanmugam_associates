@@ -445,7 +445,7 @@ export default function AboutPage({ onNavigatePage }) {
               }}
             >
               <Phone size={17} />
-              <span>Call 94435 22285 / 81100 00757</span>
+              <span>Call 94435 22285</span>
             </a>
           </div>
         </div>
