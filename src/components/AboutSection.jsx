@@ -150,24 +150,21 @@ export default function AboutSection({ onReadMore }) {
               Building Trust Through Quality Construction & Painting for <span style={{ color: '#b87816' }}>Nearly Five Decades</span>
             </h2>
 
-            {/* Description Text */}
-            <p style={{
-              fontSize: '1.02rem',
-              color: '#4b5563',
-              lineHeight: '1.8',
-              marginBottom: '1rem'
-            }}>
-              Looking for a reliable painting contractor or construction company in Coimbatore that delivers quality work, transparent pricing, and on-time completion? Welcome to <strong>Shanmugam Associates</strong>, built on trust, experience, and craftsmanship since 1977.
-            </p>
-
-            <p style={{
-              fontSize: '0.96rem',
-              color: '#4b5563',
-              lineHeight: '1.75',
-              marginBottom: '1.5rem'
-            }}>
-              For nearly 50 years, we have helped homeowners, builders, businesses, and government organizations transform their properties. In 2014, the second generation took over with a clear vision—to deliver exceptional value across residential, commercial, industrial, and government sectors.
-            </p>
+            {/* Description Text - Verbatim from Content Plan */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.75rem', color: '#4b5563', fontSize: '0.98rem', lineHeight: '1.8' }}>
+              <p style={{ margin: 0 }}>
+                If you are searching for a painting contractor or a construction company in Coimbatore that you can actually trust, you have landed in the right place. <strong>Shanmugam Associates</strong> has been part of this city's growth story since 1977. We are not a company that appeared overnight to chase quick projects. We have been here for almost fifty years, working quietly, building homes, painting walls, and slowly becoming a name that people in Coimbatore recognise and recommend to their friends and family.
+              </p>
+              <p style={{ margin: 0 }}>
+                What began as a small contracting business under the leadership of Mr. Shanmugam has grown, step by step, into one of the most dependable painting and construction names across Tamil Nadu. In our early years, we worked on important government projects, including PWD roads, highways, TWAD water supply works, and several private buildings across Coimbatore and the Nilgiris. That experience shaped the way we still work today - with structure, patience, and respect for the client's money and time.
+              </p>
+              <p style={{ margin: 0 }}>
+                In 2014, the second generation of the family took charge of the company. They chose to focus deeply on two areas where Shanmugam Associates could genuinely deliver the best value - <strong>Construction and Painting Services</strong>. Since then, we have completed projects across Coimbatore, Tiruppur, Salem, Erode, Pollachi, Mettupalayam, Chennai, and many other parts of Tamil Nadu.
+              </p>
+              <p style={{ margin: 0 }}>
+                Today, when someone in Coimbatore says 'call Shanmugam Associates', it usually comes from personal experience or a trusted recommendation. Whatever the size of the project, our approach stays the same - listen carefully, plan properly, execute honestly, and hand over on time.
+              </p>
+            </div>
 
             {/* Value Bullet Points */}
             <div style={{

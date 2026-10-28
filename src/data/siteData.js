@@ -1,21 +1,22 @@
 export const COMPANY_INFO = {
   name: "SHANMUGAM ASSOCIATES",
   tagline: "Construction Redefined...",
+  subheading: "Building Trust Through Quality Construction & Painting for Nearly Five Decades",
   since: "1977",
   experienceYears: "Nearly 50 Years",
   phone: "94435 22285",
   phonePrimary: "94435 22285",
   email: "associatesshanmugam@gmail.com",
   website: "www.associatesshanmugam.in",
-  address: "No.5, Ground Floor, First Portion, Mariamman Kovil Street, Bommanapalayam, Vadavalli, Coimbatore – 641041, Tamil Nadu",
+  address: "No.5, Ground Floor, First Portion, Mariamman Kovil Street, Bommanapalayam, Vadavalli, Coimbatore - 641041, Tamil Nadu",
   servicesList: [
     "Villa",
     "High Rise Building",
     "Tile Laying",
-    "Epoxy",
+    "Epoxy Flooring",
     "Deep Cleaning",
     "Painting",
-    "Texture",
+    "Texture Painting",
     "Waterproofing",
     "Royal Play Design"
   ],
@@ -30,8 +31,8 @@ export const COMPANY_INFO = {
 export const HERO_SLIDES = [
   {
     id: 1,
-    title: "COIMBATORE'S TRUSTED PAINTING & CONSTRUCTION COMPANY",
-    subtitle: "Building Trust Through Quality Construction & Painting for Nearly Five Decades. Since 1977.",
+    title: "COIMBATORE'S TRUSTED PAINTING & CONSTRUCTION COMPANY SINCE 1977",
+    subtitle: "Building Trust Through Quality Construction & Painting for Nearly Five Decades",
     image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=1600&auto=format&fit=crop"
   },
   {
@@ -49,23 +50,114 @@ export const HERO_SLIDES = [
   {
     id: 4,
     title: "WEATHER-PROOF & WATERPROOFING SOLUTIONS",
-    subtitle: "Protecting properties from Coimbatore's sun, dust, and monsoon rains with high-performance systems.",
+    subtitle: "Protecting properties from Coimbatore's harsh sun, heavy rain, and constant dust with high-performance systems.",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1600&auto=format&fit=crop"
   }
 ];
 
+export const HOMEPAGE_STORY = {
+  title: "Coimbatore's Trusted Painting & Construction Company Since 1977",
+  subtitle: "Building Trust Through Quality Construction & Painting for Nearly Five Decades",
+  paragraphs: [
+    "If you are searching for a painting contractor or a construction company in Coimbatore that you can actually trust, you have landed in the right place. Shanmugam Associates has been part of this city's growth story since 1977. We are not a company that appeared overnight to chase quick projects. We have been here for almost fifty years, working quietly, building homes, painting walls, and slowly becoming a name that people in Coimbatore recognise and recommend to their friends and family.",
+    "What began as a small contracting business under the leadership of Mr. Shanmugam has grown, step by step, into one of the most dependable painting and construction names across Tamil Nadu. In our early years, we worked on important government projects, including PWD roads, highways, TWAD water supply works, and several private buildings across Coimbatore and the Nilgiris. These projects were not easy. Government work demands discipline, strict quality checks, and honest reporting. That experience shaped the way we still work today - with structure, patience, and respect for the client's money and time.",
+    "In 2014, the second generation of the family took charge of the company. They looked closely at everything the business was doing and made an important decision. Instead of spreading thin across many types of work, they chose to focus deeply on two areas where Shanmugam Associates could genuinely deliver the best value - Construction and Painting Services. This single decision changed the direction of the company. Since then, we have expanded our team, invested in better tools and modern practices, and completed projects across Coimbatore, Tiruppur, Salem, Erode, Pollachi, Mettupalayam, and many other parts of Tamil Nadu.",
+    "Today, when someone in Coimbatore says 'call Shanmugam Associates', it usually comes from personal experience or a trusted recommendation. We serve residential families building their dream home, commercial businesses wanting a professional look, industrial units needing durable finishes, and government bodies that require strict compliance. Whatever the size of the project, our approach stays the same - listen carefully, plan properly, execute honestly, and hand over on time."
+  ]
+};
+
+export const WHAT_WE_DO = {
+  painting: {
+    title: "Professional Painting Services",
+    intro: "A good paint job is not just about making a wall look nice. It protects the concrete and plaster underneath from sun, rain, and everyday wear. It adds real value to your property, and it creates the first impression that every visitor, tenant, or buyer notices the moment they walk in. Our painting team is trained to prepare surfaces properly, apply even coats, and finish with a smooth, long-lasting result that does not peel or fade within a year.",
+    services: [
+      {
+        title: "Interior Painting",
+        desc: "Proper surface preparation, crack filling, priming, and multiple coats for a flawless finish inside your home or office.",
+        slug: "interior-painting"
+      },
+      {
+        title: "Exterior Painting",
+        desc: "Weather-resistant systems built to survive Coimbatore's harsh sun, heavy rain, and constant dust.",
+        slug: "exterior-painting"
+      },
+      {
+        title: "Texture Painting & Royal Play Designs",
+        desc: "Modern texture finishes, decorative effects, and premium designer walls.",
+        slug: "texture-painting"
+      },
+      {
+        title: "Waterproofing Solutions",
+        desc: "Stopping leakage, dampness, and structural damage at terraces, roofs, walls, bathrooms and basements.",
+        slug: "waterproofing"
+      },
+      {
+        title: "Epoxy Flooring",
+        desc: "Durable, easy-to-clean flooring for factories, warehouses, parking areas and commercial spaces.",
+        slug: "commercial-painting"
+      },
+      {
+        title: "Deep Cleaning Services",
+        desc: "Detailed post-painting and post-renovation cleaning so your property is ready for immediate use.",
+        slug: "house-painting"
+      }
+    ]
+  },
+  construction: {
+    title: "Construction Services",
+    intro: "At Shanmugam Associates, we don't just build structures - we build the spaces where families live, businesses grow, and communities come together. Our construction team handles everything from a single independent house to a large apartment complex, always keeping quality, safety, and honest budgeting at the centre of the work.",
+    services: [
+      {
+        title: "Villa Construction",
+        desc: "From luxury villas to compact residential homes, tailored to your requirements and budget."
+      },
+      {
+        title: "Apartment Construction",
+        desc: "Multi-unit residential projects with careful attention to quality and on-time handover."
+      },
+      {
+        title: "Commercial Construction",
+        desc: "Offices, retail outlets, showrooms, industrial buildings, schools, and hospitals."
+      },
+      {
+        title: "Layout & Plot Development",
+        desc: "Planning, roads, drainage systems, and complete site preparation."
+      },
+      {
+        title: "Renovation & Remodeling",
+        desc: "Giving your existing property a fresh new look through structural upgrades and modernisation."
+      },
+      {
+        title: "End-to-End Project Management",
+        desc: "From concept and planning to execution and final handover."
+      }
+    ]
+  }
+};
+
 export const LEADERSHIP = [
   {
-    role: "FOUNDER",
+    role: "Founder",
     name: "Mrs. Nikilalochani Sathyan",
-    bio: "With a background in teaching and accounting, she brings discipline and attention to detail to every part of the business — from planning to client relationships."
+    bio: "With a background in teaching and accounting, Mrs. Nikilalochani Sathyan brings discipline and attention to detail to every part of the business, from early-stage planning right through to how client relationships are maintained. Her approach ensures that the company does not just chase project after project, but builds long-term trust with every person it works with."
   },
   {
-    role: "BUSINESS HEAD",
+    role: "Business Head",
     name: "Mr. Sathyan Shanmugam",
-    bio: "He leads the construction side of the company, having personally worked on projects like smart city developments, storm water drainage, retaining walls, parks, sports courts, markets, bus stands, schools and community halls."
+    bio: "Mr. Sathyan Shanmugam leads the construction side of the company. He has personally worked on projects like smart city developments, storm water drainage, retaining walls, parks, sports courts, markets, bus stands, schools, and community halls. This hands-on experience across both government and private projects gives him a practical understanding of what actually works on the ground, not just on paper."
   }
 ];
+
+export const MISSION_VISION = {
+  mission: {
+    title: "Our Mission",
+    desc: "Our mission is simple to say but not always simple to deliver - give every client a painting or construction job that is high quality, done honestly, and finished on time, without cutting corners. We know that a home is often the biggest investment a family makes, and a commercial building is often the face of someone's business. We treat both with the seriousness they deserve."
+  },
+  vision: {
+    title: "Our Vision",
+    desc: "Our vision is to be known across Tamil Nadu as a construction and painting partner that people can genuinely trust - not just for the buildings we create, but for the way we treat our clients from the very first phone call to the final handover. We want families to recommend us to their relatives, and businesses to call us back for their next branch or expansion, simply because the experience of working with us was fair and stress-free."
+  }
+};
 
 export const TRUSTED_CLIENTS = [
   "KCP Infra Limited",
@@ -121,68 +213,57 @@ export const PROJECTS_WE_HANDLE = [
 export const WHY_CHOOSE_US = [
   {
     title: "Nearly 50 Years of Experience",
-    desc: "Our long history in the industry gives us the knowledge and expertise to handle projects of all sizes and complexities."
+    desc: "Our long history in this industry gives us the practical knowledge to handle projects of every size, from a single-room repaint to a large gated community, without losing sight of the small details that matter."
   },
   {
     title: "Skilled Workforce",
-    desc: "Our team consists of experienced engineers, supervisors, civil workers, painters, and project managers committed to delivering exceptional results."
+    desc: "Our team is made up of experienced engineers, supervisors, civil workers, painters, and project managers who are genuinely committed to delivering good results, not just finishing quickly and moving on."
   },
   {
     title: "Government Project Experience",
-    desc: "We have successfully executed projects involving hospitals, schools, colleges, community halls, parks, roads, and public infrastructure, giving us a strong understanding of quality standards and compliance requirements."
+    desc: "We have executed projects for hospitals, schools, colleges, community halls, parks, roads, and other public infrastructure. This background gives us a strong understanding of quality standards, documentation, and compliance requirements that many smaller contractors simply do not have."
   },
   {
     title: "Transparent Pricing",
-    desc: "We believe in honesty and transparency. Our quotations are clear, detailed, and free from hidden charges."
+    desc: "We believe honesty builds long relationships. Our quotations are clear, detailed, and written so that you can actually understand what you are paying for, with no hidden charges added later."
   },
   {
-    title: "Quality Materials",
-    desc: "We use trusted brands, quality construction materials, and premium paints to ensure long-lasting performance."
+    title: "Quality Materials & Timely Completion",
+    desc: "We use trusted brands and quality materials because cutting corners on materials always costs more in the long run. At the same time, we respect deadlines and work hard to finish every project within the timeline we agree on with you."
   },
   {
-    title: "Timely Completion",
-    desc: "We understand the importance of deadlines and strive to complete every project within the agreed timeline."
-  },
-  {
-    title: "Customer-Centric Approach",
-    desc: "Every client receives personal attention, professional guidance, and regular project updates throughout the construction or painting process."
-  },
-  {
-    title: "Safety & Cleanliness",
-    desc: "We maintain safe working practices and clean worksites to protect your property and ensure smooth project execution."
+    title: "Customer-Centric Approach & Safety",
+    desc: "Every client gets personal attention, honest guidance, and regular updates during the project. We also maintain safe working practices and clean worksites, so your property stays protected and your daily life is disturbed as little as possible while work is going on."
   }
 ];
 
 export const HOME_FAQS = [
   {
     q: "How long has Shanmugam Associates been in the construction and painting industry?",
-    a: "Shanmugam Associates has been serving clients since 1977, with nearly five decades of experience in painting, construction, infrastructure development, and renovation projects across Tamil Nadu."
+    a: "We have been serving clients since 1977, with nearly five decades of experience in painting, construction, infrastructure development, and renovation projects across Tamil Nadu."
   },
   {
     q: "Do you provide free site inspections and quotations?",
-    a: "Yes. We offer free site visits, inspections, and detailed quotations to help you understand the project scope and cost before making any commitment."
+    a: "Yes. We offer free site visits, inspections, and detailed quotations to help you understand the project scope and cost before you make any commitment."
   },
   {
     q: "Do you handle both residential and commercial projects?",
-    a: "Yes. We undertake residential, commercial, industrial, institutional, and government projects of various sizes."
+    a: "Yes. We undertake residential, commercial, industrial, institutional, and government projects of various sizes, big or small."
   },
   {
     q: "Which paint brands do you use?",
-    a: "We work with leading paint brands such as Asian Paints, Berger Paints, Nerolac Paints, Dulux Paints, and Indigo Paints."
+    a: "We work with leading paint brands such as Asian Paints, Berger Paints, Nerolac Paints, Dulux Paints, and Indigo Paints, chosen based on your budget and the finish you want."
   },
   {
     q: "How do you ensure quality in painting projects?",
-    a: "Our painting process includes Surface Inspection, Crack Repair, Wall Preparation, Primer Application, Multiple Paint Coats, Quality Checks, and Final Inspection. This ensures a smooth, durable, and long-lasting finish."
-  },
-  {
-    q: "How can I get started with my project?",
-    a: "Simply call us at 94435 22285 or send your project details. Our team will arrange a site visit, understand your requirements, and provide a detailed quotation."
+    a: "Our process includes surface inspection, crack repair, wall preparation, primer application, multiple paint coats, quality checks, and a final inspection - this ensures a smooth, durable, and long-lasting finish."
   }
 ];
 
 export const SPECIALIZED_PROVISIONS = [
   {
     slug: "interior-painting",
+    route: "/interior-painting",
     name: "Interior Painting",
     tagline: "Smooth Finish, Clean Work, and Long-Lasting Colour",
     seoTitle: "Interior Painting Services in Coimbatore | Shanmugam Associates",
@@ -192,6 +273,7 @@ export const SPECIALIZED_PROVISIONS = [
   },
   {
     slug: "exterior-painting",
+    route: "/exterior-painting",
     name: "Exterior Painting",
     tagline: "Weatherproof Paint Solutions Built for Coimbatore Weather",
     seoTitle: "Exterior Painting Services in Coimbatore | Weatherproof Paint Solutions",
@@ -201,6 +283,7 @@ export const SPECIALIZED_PROVISIONS = [
   },
   {
     slug: "house-painting",
+    route: "/house-painting",
     name: "House Painting",
     tagline: "Complete Home Painting Solutions — New & Repainting",
     seoTitle: "House Painting Services in Coimbatore | New & Repaint Solutions",
@@ -210,6 +293,7 @@ export const SPECIALIZED_PROVISIONS = [
   },
   {
     slug: "commercial-painting",
+    route: "/commercial-painting",
     name: "Commercial Painting",
     tagline: "Offices, Showrooms, Hospitals & Factories",
     seoTitle: "Commercial Painting Contractors in Coimbatore | Offices, Shops & Factories",
@@ -219,6 +303,7 @@ export const SPECIALIZED_PROVISIONS = [
   },
   {
     slug: "texture-painting",
+    route: "/texture-painting",
     name: "Texture Painting",
     tagline: "Royal Play & Designer Wall Finishes",
     seoTitle: "Texture Painting Services in Coimbatore | Royal Play & Designer Wall Finishes",
@@ -228,30 +313,12 @@ export const SPECIALIZED_PROVISIONS = [
   },
   {
     slug: "waterproofing",
+    route: "/waterproofing",
     name: "Waterproofing",
-    tagline: "Terrace, Roof & Wall Leakage Prevention",
+    tagline: "Terrace, Roof & Wall Solutions",
     seoTitle: "Waterproofing Services in Coimbatore | Terrace, Roof & Wall Solutions",
     metaDesc: "Stop water leakage and damp walls before they damage your building. Shanmugam Associates offers reliable waterproofing services across Coimbatore.",
     image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1000&auto=format&fit=crop",
     highlights: ["Terrace & Roof Waterproofing", "Dampness & Wall Seepage Fix", "Structural Protection"]
   }
 ];
-
-export const WHAT_WE_DO = {
-  painting: [
-    { title: "Interior Painting", desc: "Transform your living and working spaces with premium interior painting solutions. We ensure proper surface preparation, crack filling, priming, and multiple coats for a flawless finish.", slug: "interior-painting" },
-    { title: "Exterior Painting", desc: "Protect your property from Coimbatore's harsh sunlight, rain, dust, and weather conditions with high-quality exterior painting systems designed for long-term durability.", slug: "exterior-painting" },
-    { title: "Texture Painting & Royal Play Designs", desc: "Add elegance and character to your walls with modern texture finishes, decorative wall effects, and premium Royal Play designs.", slug: "texture-painting" },
-    { title: "Waterproofing Solutions", desc: "Prevent water leakage, dampness, wall damage, and structural deterioration through professional waterproofing services for terraces, roofs, walls, bathrooms, and basements.", slug: "waterproofing" },
-    { title: "Epoxy Flooring", desc: "We provide durable epoxy flooring solutions for industrial facilities, commercial spaces, parking areas, warehouses, and manufacturing units.", slug: "epoxy" },
-    { title: "Deep Cleaning Services", desc: "After painting or renovation work, our team performs detailed cleaning to leave your property neat, hygienic, and ready for immediate use.", slug: "deep-cleaning" }
-  ],
-  construction: [
-    { title: "Villa Construction", desc: "From luxury villas to compact residential homes, we provide complete construction solutions tailored to your requirements and budget." },
-    { title: "Apartment Construction", desc: "We have extensive experience in apartment and multi-unit residential projects, ensuring quality construction and timely project completion." },
-    { title: "Commercial Construction", desc: "Our team handles offices, retail outlets, showrooms, industrial buildings, educational institutions, and healthcare facilities with the highest professional standards." },
-    { title: "Layout & Plot Development", desc: "We undertake complete layout development projects, including planning, infrastructure development, roads, drainage systems, and site preparation." },
-    { title: "Renovation & Remodeling", desc: "Give your existing property a fresh new look through renovation, remodeling, structural upgrades, and modernization services." },
-    { title: "End-to-End Project Management", desc: "From concept and planning to execution and final handover, we manage every stage of the project efficiently, ensuring quality, safety, and transparency." }
-  ]
-};

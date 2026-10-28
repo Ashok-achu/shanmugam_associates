@@ -52,27 +52,7 @@ export default function ProjectsSection({ onNavigatePage }) {
         highlights: "Weather-resistant elastomeric paint with 7-year warranty and UV protection."
       }
     },
-    {
-      id: 2,
-      title: "Sri Sai Apartments",
-      location: "Ganapathy, Coimbatore",
-      description: "Residential apartment with premium exterior painting and common area finishes.",
-      status: "Completed",
-      photosCount: 10,
-      tags: ["Residential", "Exterior Painting", "Common Area"],
-      categories: ["all", "residential", "exterior"],
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=900&auto=format&fit=crop",
-      gallery: [
-        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=900&auto=format&fit=crop"
-      ],
-      details: {
-        client: "Sri Sai Residential Association",
-        scope: "Complete Façade Restoration & Waterproof Putty Treatment",
-        completion: "Delivered in 45 Days",
-        highlights: "Multi-tier anti-algae exterior coating and durable common staircase finish."
-      }
-    },
+    
     {
       id: 3,
       title: "Business Center",
