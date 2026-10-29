@@ -26,7 +26,7 @@ export default function BlogPage({ onNavigatePage }) {
       {/* ══════════════════════════════════════════════════════════
           HERO BANNER
       ══════════════════════════════════════════════════════════ */}
-      <section style={{
+      <section className="page-hero-section" style={{
         background: 'linear-gradient(135deg, #090e17 0%, #111827 60%, #1e293b 100%)',
         color: '#ffffff',
         padding: '5.5rem 1.5rem 4.5rem',
@@ -60,7 +60,7 @@ export default function BlogPage({ onNavigatePage }) {
             Shanmugam Associates Knowledge Hub
           </div>
 
-          <h1 style={{
+          <h1 className="page-hero-h1" style={{
             fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
             fontWeight: '800',
             color: '#ffffff',
@@ -109,7 +109,7 @@ export default function BlogPage({ onNavigatePage }) {
           </p>
         </div>
 
-        <div style={{
+        <div className="service-cards-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
           gap: '1.75rem'
@@ -222,7 +222,7 @@ export default function BlogPage({ onNavigatePage }) {
             )}
           </div>
 
-          <div style={{
+          <div className="service-cards-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
             gap: '2rem'

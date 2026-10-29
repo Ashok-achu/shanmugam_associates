@@ -306,6 +306,7 @@ iframe {
   max-width: 100%;
 }
 
+/* ─── TABLET (≤ 768px) ─── */
 @media (max-width: 768px) {
   /* Prevent auto-zoom on iOS Safari when focusing inputs */
   input, textarea, select {
@@ -323,24 +324,220 @@ iframe {
   .section-header {
     margin-bottom: 2.25rem !important;
   }
+
+  /* ── Hero ── */
+  #hero {
+    height: 80vh !important;
+    min-height: 520px !important;
+  }
+  .hero-nav-prev { left: 0.6rem !important; width: 38px !important; height: 38px !important; }
+  .hero-nav-next { right: 0.6rem !important; width: 38px !important; height: 38px !important; }
+
+  /* ── What We Do section padding ── */
+  #what-we-do {
+    padding: 4rem 1rem 3.5rem !important;
+  }
+
+  /* ── Page Hero banners (About, Service pages) ── */
+  .page-hero-section {
+    padding: 4rem 1rem 3rem !important;
+  }
+
+  /* ── Provision Detail: un-sticky sidebar ── */
+  .provision-sidebar {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* ── Floating nav: shrink padding on tablet ── */
+  .floating-nav-capsule {
+    padding: 0.28rem 0.4rem 0.28rem 0.65rem !important;
+  }
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 0.95rem !important;
+/* ─── MOBILE (≤ 640px) ─── */
+@media (max-width: 640px) {
+
+  /* ── Hero ── */
+  #hero {
+    height: 85vh !important;
+    min-height: 520px !important;
+  }
+  .hero-nav-prev { left: 0.4rem !important; width: 34px !important; height: 34px !important; }
+  .hero-nav-next { right: 0.4rem !important; width: 34px !important; height: 34px !important; }
+
+  /* ── Hero buttons: stack on small screens ── */
+  #hero .hero-cta-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+  #hero .hero-cta-row a,
+  #hero .hero-cta-row button {
+    width: 100% !important;
+    justify-content: center !important;
   }
 
-  .section {
-    padding: 3rem 0 !important;
+  /* ── What We Do: compact ── */
+  #what-we-do {
+    padding: 3rem 0.85rem 2.5rem !important;
+  }
+  #what-we-do .section-main-header {
+    margin-bottom: 2.5rem !important;
   }
 
-  .section-title {
-    font-size: 1.55rem !important;
+  /* ── Service card grids: always single column ── */
+  .service-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Reasons grid: 1 col on phone ── */
+  .why-choose-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* ── Projects / Areas ── */
+  .projects-area-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  /* ── FAQ items ── */
+  .faq-item-title {
+    font-size: 1rem !important;
+  }
+
+  /* ── About / Provision page hero banners ── */
+  .page-hero-section {
+    padding: 3.5rem 0.85rem 2.5rem !important;
+  }
+  .page-hero-h1 {
+    font-size: clamp(1.8rem, 7vw, 2.6rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  /* ── About story + 3-phase grid: single col ── */
+  .about-phases-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Mission/Vision cards: stack ── */
+  .mission-vision-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Team cards: compact ── */
+  .team-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Trusted clients: 2 cols ── */
+  .trusted-clients-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  /* ── Provision detail: full-width layout, sidebar stacks under ── */
+  .provision-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .provision-sidebar {
+    position: static !important;
+    top: auto !important;
+  }
+  /* sticky CTA sidebar becomes an inline card */
+  .provision-sidebar > div:first-child {
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  /* ── Service scope cards: single col ── */
+  .rooms-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Process steps: 2 cols ── */
+  .process-steps-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  /* ── Features bar ── */
+  .features-bar-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* ── Credential strip on About story ── */
+  .credential-strip {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 0.6rem !important;
+  }
+
+  /* ── Navbar: book button smaller ── */
+  .book-appointment-btn {
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* ── Floating nav capsule on scroll: compact ── */
+  .floating-nav-capsule {
+    padding: 0.25rem 0.35rem 0.25rem 0.55rem !important;
+    gap: 0.25rem !important;
+  }
+
+  /* ── Typography scale-down ── */
+  .section-title { font-size: 1.6rem !important; }
+
+  /* ── CTA section: stack buttons ── */
+  .cta-button-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .cta-button-row a,
+  .cta-button-row button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* ─── SMALL PHONE (≤ 420px) ─── */
+@media (max-width: 420px) {
+  /* Even more compact padding on tiny phones */
+  #what-we-do {
+    padding: 2.5rem 0.7rem !important;
+  }
+
+  .page-hero-section {
+    padding: 3rem 0.7rem 2rem !important;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .projects-area-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Credential strip on tiny phones: stacked */
+  .credential-strip {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .trusted-clients-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* About team approach card: less padding */
+  .approach-cta-box {
+    padding: 1.75rem 1rem !important;
   }
 
   .btn {
-    padding: 0.72rem 1.3rem !important;
-    font-size: 0.86rem !important;
+    padding: 0.72rem 1.1rem !important;
+    font-size: 0.84rem !important;
   }
 }
 

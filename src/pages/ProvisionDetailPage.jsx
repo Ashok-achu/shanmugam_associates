@@ -36,7 +36,7 @@ export default function ProvisionDetailPage({ slug, onNavigatePage, onSelectProv
       {/* ══════════════════════════════════════════════════════════
           HERO BANNER
       ══════════════════════════════════════════════════════════ */}
-      <section style={{
+      <section className="page-hero-section" style={{
         background: `linear-gradient(135deg, rgba(9, 14, 23, 0.94) 0%, rgba(17, 24, 39, 0.90) 100%), url("${item.image}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -85,7 +85,7 @@ export default function ProvisionDetailPage({ slug, onNavigatePage, onSelectProv
             {item.subheading}
           </div>
 
-          <h1 style={{
+          <h1 className="page-hero-h1" style={{
             fontSize: 'clamp(2.3rem, 4.8vw, 3.8rem)',
             fontWeight: '800',
             color: '#ffffff',
@@ -208,7 +208,7 @@ export default function ProvisionDetailPage({ slug, onNavigatePage, onSelectProv
           MAIN CONTENT LAYOUT: DEDICATED SECTIONS
       ══════════════════════════════════════════════════════════ */}
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '4.5rem 1.5rem 5.5rem' }}>
-        <div style={{
+        <div className="provision-main-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
           gap: '4rem',
@@ -245,7 +245,7 @@ export default function ProvisionDetailPage({ slug, onNavigatePage, onSelectProv
                 {currentSlug === 'waterproofing' && "Areas We Waterproof"}
               </h2>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.25rem' }}>
+              <div className="rooms-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.25rem' }}>
                 {item.roomsWePaint.map((room, idx) => (
                   <div key={idx} style={{
                     background: '#f8fafc',
@@ -353,7 +353,7 @@ export default function ProvisionDetailPage({ slug, onNavigatePage, onSelectProv
                 {currentSlug === 'waterproofing' ? "Our Waterproofing Process" : "How We Work"}
               </h2>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1.25rem' }}>
+              <div className="process-steps-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1.25rem' }}>
                 {item.process.map((step) => (
                   <div key={step.step} style={{
                     background: '#f8fafc',
@@ -453,7 +453,7 @@ export default function ProvisionDetailPage({ slug, onNavigatePage, onSelectProv
           </div>
 
           {/* Right Column: Sticky Consultation Box & Quick Info */}
-          <div style={{
+          <div className="provision-sidebar" style={{
             position: 'sticky',
             top: '140px',
             display: 'flex',

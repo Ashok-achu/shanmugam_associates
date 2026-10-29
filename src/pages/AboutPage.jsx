@@ -26,7 +26,7 @@ export default function AboutPage({ onNavigatePage }) {
       {/* ══════════════════════════════════════════════════════════
           ABOUT HERO BANNER
       ══════════════════════════════════════════════════════════ */}
-      <section style={{
+      <section className="page-hero-section" style={{
         background: 'linear-gradient(135deg, #090e17 0%, #111827 60%, #1e293b 100%)',
         color: '#ffffff',
         padding: '5.5rem 1.5rem 4.5rem',
@@ -60,7 +60,7 @@ export default function AboutPage({ onNavigatePage }) {
             Coimbatore's Trusted Painting & Construction Company Since 1977
           </div>
 
-          <h1 style={{
+          <h1 className="page-hero-h1" style={{
             fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
             fontWeight: '800',
             color: '#ffffff',
@@ -166,7 +166,7 @@ export default function AboutPage({ onNavigatePage }) {
             </div>
 
             {/* Quick Credentials Strip */}
-            <div style={{
+            <div className="credential-strip" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '1rem',
@@ -219,7 +219,7 @@ export default function AboutPage({ onNavigatePage }) {
             </p>
           </div>
 
-          <div style={{
+          <div className="team-cards-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))',
             gap: '2.5rem'
@@ -272,7 +272,7 @@ export default function AboutPage({ onNavigatePage }) {
           MISSION & VISION
       ══════════════════════════════════════════════════════════ */}
       <section style={{ maxWidth: '1280px', margin: '0 auto', padding: '5.5rem 1.5rem' }}>
-        <div style={{
+        <div className="mission-vision-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))',
           gap: '2.5rem'
@@ -364,7 +364,7 @@ export default function AboutPage({ onNavigatePage }) {
             </p>
           </div>
 
-          <div style={{
+          <div className="trusted-clients-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))',
             gap: '1rem'
@@ -466,7 +466,7 @@ export default function AboutPage({ onNavigatePage }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '2rem' }}>
+          <div className="about-phases-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '2rem' }}>
             {/* Phase 1 */}
             <div style={{
               background: '#ffffff',
@@ -600,7 +600,7 @@ export default function AboutPage({ onNavigatePage }) {
           </div>
 
           {/* Right CTA Callout Box */}
-          <div style={{
+          <div className="approach-cta-box" style={{
             background: 'linear-gradient(135deg, #090e17 0%, #1e293b 100%)',
             borderRadius: '24px',
             padding: '3rem 2.5rem',

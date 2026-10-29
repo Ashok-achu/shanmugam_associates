@@ -168,7 +168,7 @@ export default function ProjectsPage({ onNavigatePage }) {
       {/* ═══════════════════════════════════════════════════════════════
           PROJECTS HERO
       ═══════════════════════════════════════════════════════════════ */}
-      <section style={{
+      <section className="page-hero-section" style={{
         background: 'linear-gradient(135deg, #090e17 0%, #111827 60%, #1e293b 100%)',
         color: '#ffffff',
         padding: '5.5rem 1.5rem 4.5rem 1.5rem',
@@ -194,7 +194,7 @@ export default function ProjectsPage({ onNavigatePage }) {
             Our Portfolio & Proven Track Record
           </div>
 
-          <h1 style={{
+          <h1 className="page-hero-h1" style={{
             fontSize: 'clamp(2.4rem, 5vw, 3.6rem)',
             fontWeight: '800',
             color: '#ffffff',
@@ -267,7 +267,7 @@ export default function ProjectsPage({ onNavigatePage }) {
         </div>
 
         {/* Projects 3-Col Grid */}
-        <div style={{
+        <div className="service-cards-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))',
           gap: '2rem'

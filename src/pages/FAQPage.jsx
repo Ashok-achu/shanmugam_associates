@@ -50,7 +50,7 @@ export default function FAQPage({ onNavigatePage }) {
       {/* ══════════════════════════════════════════════════════════
           HERO BANNER
       ══════════════════════════════════════════════════════════ */}
-      <section style={{
+      <section className="page-hero-section" style={{
         background: 'linear-gradient(135deg, #090e17 0%, #111827 60%, #1e293b 100%)',
         color: '#ffffff',
         padding: '5.5rem 1.5rem 4.5rem',
@@ -84,7 +84,7 @@ export default function FAQPage({ onNavigatePage }) {
             Honest Answers & Transparent Guidance
           </div>
 
-          <h1 style={{
+          <h1 className="page-hero-h1" style={{
             fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
             fontWeight: '800',
             color: '#ffffff',
@@ -228,7 +228,7 @@ export default function FAQPage({ onNavigatePage }) {
                       }}>
                         {item.category}
                       </span>
-                      <h3 style={{
+                      <h3 className="faq-item-title" style={{
                         fontSize: '1.08rem',
                         fontWeight: '700',
                         color: isOpen ? '#111827' : '#1f2937',
@@ -322,7 +322,7 @@ export default function FAQPage({ onNavigatePage }) {
               {STILL_HAVE_QUESTIONS.text}
             </p>
 
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <div className="cta-button-row" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <a
                 href={`tel:${COMPANY_INFO.phonePrimary}`}
                 style={{

@@ -40,7 +40,7 @@ export default function ContactPage() {
       {/* ══════════════════════════════════════════════════════════
           HERO BANNER
       ══════════════════════════════════════════════════════════ */}
-      <section style={{
+      <section className="page-hero-section" style={{
         background: 'linear-gradient(135deg, #090e17 0%, #111827 60%, #1e293b 100%)',
         color: '#ffffff',
         padding: '5.5rem 1.5rem 4.5rem',
@@ -74,7 +74,7 @@ export default function ContactPage() {
             Free Consultation & Site Visit
           </div>
 
-          <h1 style={{
+          <h1 className="page-hero-h1" style={{
             fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
             fontWeight: '800',
             color: '#ffffff',
@@ -448,7 +448,7 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                <div className="cta-button-row" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
                   <button
                     type="submit"
                     style={{

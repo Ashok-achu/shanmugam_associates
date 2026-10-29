@@ -86,6 +86,7 @@ export default function CTASection() {
 
           {/* Button group */}
           <div
+            className="cta-button-row"
             style={{
               display: 'flex',
               flexWrap: 'wrap',

@@ -290,7 +290,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       {/* ═══════════════════════════════════════════════════════════════
           HERO BANNER
       ═══════════════════════════════════════════════════════════════ */}
-      <section style={{
+      <section className="page-hero-section" style={{
         background: 'linear-gradient(135deg, #090e17 0%, #111827 60%, #1e293b 100%)',
         color: '#ffffff',
         padding: '5.5rem 1.5rem 5rem 1.5rem',
@@ -331,7 +331,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
             Professional Engineering & Painting Services
           </div>
 
-          <h1 style={{
+          <h1 className="page-hero-h1" style={{
             fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
             fontWeight: '800',
             color: '#ffffff',
@@ -354,7 +354,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
           </p>
 
           {/* Quick Metrics Bar */}
-          <div style={{
+          <div className="credential-strip" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))',
             gap: '1.5rem',

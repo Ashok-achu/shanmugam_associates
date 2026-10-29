@@ -94,7 +94,7 @@ export default function HeroSection({ onGetStartedClick }) {
             Building Trust Through Quality Construction & Painting for Nearly Five Decades.
           </p>
 
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+          <div className="hero-cta-row" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <button 
               onClick={onGetStartedClick}
               style={{ 

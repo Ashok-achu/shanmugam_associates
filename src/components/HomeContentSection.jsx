@@ -55,7 +55,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           
           {/* Main Section Header */}
-          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 4rem' }}>
+          <div className="section-main-header" style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 4rem' }}>
             <div style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -119,7 +119,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
             </div>
 
             {/* 6 Painting Service Cards Grid */}
-            <div style={{
+            <div className="service-cards-grid" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
               gap: '1.5rem'
@@ -211,7 +211,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
             </div>
 
             {/* 6 Construction Service Cards Grid */}
-            <div style={{
+            <div className="service-cards-grid" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
               gap: '1.5rem'
@@ -312,7 +312,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
             </p>
           </div>
 
-          <div style={{
+          <div className="why-choose-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
             gap: '2rem'
@@ -445,7 +445,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
                 borderRadius: '16px',
                 padding: '2rem'
               }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
+                <div className="projects-area-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
                   {AREAS_SERVED.map((city, idx) => (
                     <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                       <MapPin size={18} color="#f59e0b" style={{ flexShrink: 0 }} />
@@ -549,7 +549,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
                       cursor: 'pointer'
                     }}
                   >
-                    <h3 style={{
+                    <h3 className="faq-item-title" style={{
                       fontSize: '1.05rem',
                       fontWeight: '700',
                       color: isOpen ? '#111827' : '#1f2937',
