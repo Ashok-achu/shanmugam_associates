@@ -79,7 +79,7 @@ export default function HeroSection({ onGetStartedClick }) {
             lineHeight: 1.18,
             textShadow: '0 4px 20px rgba(0,0,0,0.8)'
           }}>
-            Coimbatore's Trusted Painting & <span style={{ color: '#b87816' }}>Construction Company</span>
+            Coimbatore's Trusted Painting & <span style={{ color: '#b87816' }}>Construction Company</span> Since 1977
           </h2>
 
           <p style={{ 

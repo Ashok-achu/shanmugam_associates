@@ -462,7 +462,7 @@ export default function AboutPage({ onNavigatePage }) {
               How We Have Grown Over the Decades
             </h2>
             <p style={{ color: '#475569', fontSize: '1rem', lineHeight: 1.75 }}>
-              Looking back at nearly fifty years of work, it is easy to see the company in three broad phases.
+              Looking back at nearly fifty years of work, it is easy to see the company in three broad phases. The first phase, from 1977 through the early 2000s, was largely about government infrastructure. The second phase saw a gradual shift toward private residential and commercial clients. The third phase began in 2014, when the second generation focused the company specifically on Construction and Painting.
             </p>
           </div>
 
@@ -482,7 +482,7 @@ export default function AboutPage({ onNavigatePage }) {
                 Government Infrastructure
               </h3>
               <p style={{ color: '#475569', fontSize: '0.96rem', lineHeight: 1.75, margin: 0 }}>
-                Largely about government infrastructure - roads, water projects, and public buildings, where the founder built a reputation for reliability with strict government engineers who did not tolerate shortcuts. From government work, we learned discipline and rigorous documentation.
+                Largely about government infrastructure - roads, water projects, and public buildings, where the founder built a reputation for reliability with strict government engineers who did not tolerate shortcuts. From government work, we learned discipline and documentation. These projects had to be inspected, measured, and approved - and that standard became part of our foundation.
               </p>
             </div>
 
@@ -501,7 +501,7 @@ export default function AboutPage({ onNavigatePage }) {
                 Residential & Commercial Boom
               </h3>
               <p style={{ color: '#475569', fontSize: '0.96rem', lineHeight: 1.75, margin: 0 }}>
-                A gradual shift toward private residential and commercial clients, as Coimbatore's construction boom picked up pace and families began investing more in independent houses and apartments. We learned the importance of personalized communication and customer care.
+                A gradual shift toward private residential and commercial clients, as Coimbatore's construction boom picked up pace and families began investing more in independent houses and apartments. From private residential growth, we learned the importance of communication and personal attention, since homeowners expect a very different experience compared to a government department.
               </p>
             </div>
 
@@ -520,7 +520,7 @@ export default function AboutPage({ onNavigatePage }) {
                 Second Gen Focus: Construction & Painting
               </h3>
               <p style={{ color: '#475569', fontSize: '0.96rem', lineHeight: 1.75, margin: 0 }}>
-                The second generation focused the company specifically on Construction and Painting, building deeper expertise rather than spreading resources thin. We learned that doing fewer things exceptionally well serves clients far better than trying to be everything to everyone.
+                The second generation focused the company specifically on Construction and Painting, allowing us to build deeper expertise in these two areas rather than spreading resources across many different services. From our focused approach since 2014, we learned that doing fewer things exceptionally well serves clients better than trying to be everything to everyone.
               </p>
             </div>
           </div>
@@ -561,7 +561,7 @@ export default function AboutPage({ onNavigatePage }) {
             </h2>
 
             <p style={{ color: '#475569', fontSize: '1.02rem', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-              Regardless of whether a project is a small bedroom repaint or a multi-crore apartment construction, we follow the same underlying principles:
+              Regardless of whether a project is a small bedroom repaint or a multi-crore apartment construction, we follow the same underlying principles. We start with honest listening, understanding what the client actually wants and needs, not just what is easiest for us to deliver. We follow this with careful planning, including realistic timelines and transparent budgeting. During execution, we maintain regular communication, so clients are never left wondering what stage their project is at. And at the end, we walk through the completed work together with the client, addressing any concerns before we consider the job finished. This consistency across project types is part of why so many of our clients come back to us for their next requirement as well.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

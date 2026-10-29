@@ -28,7 +28,6 @@ import {
 } from '../data/siteData';
 
 export default function HomeContentSection({ onNavigatePage, onSelectProvision }) {
-  const [activeTab, setActiveTab] = useState('painting');
   const [expandedFaq, setExpandedFaq] = useState(0);
 
   const handleServiceClick = (slug) => {
@@ -42,16 +41,21 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
     }
   };
 
+  const paintingIcons = [Paintbrush, ShieldCheck, Sparkles, Layers, Award, CheckCircle2];
+  const constructionIcons = [Home, Building2, Building2, MapPin, Sparkles, FileText];
+
   return (
     <div style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", background: '#ffffff', color: '#111827' }}>
       
       {/* ══════════════════════════════════════════════════════════
-          WHAT WE DO: PROFESSIONAL PAINTING & CONSTRUCTION SERVICES
+          WHAT WE DO: COMPLETE PAINTING & CONSTRUCTION SERVICES
+          Both sections are fully visible on the homepage!
       ══════════════════════════════════════════════════════════ */}
-      <section style={{ padding: '6rem 1.5rem 5rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+      <section id="what-we-do" style={{ padding: '6.5rem 1.5rem 5.5rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           
-          <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 3rem' }}>
+          {/* Main Section Header */}
+          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 4rem' }}>
             <div style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -69,93 +73,60 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
             </div>
 
             <h2 style={{
-              fontSize: 'clamp(2.1rem, 3.8vw, 2.85rem)',
+              fontSize: 'clamp(2.1rem, 3.8vw, 2.9rem)',
               fontWeight: '800',
               color: '#111827',
-              lineHeight: 1.2
+              lineHeight: 1.2,
+              marginBottom: '1rem'
             }}>
               Specialized Expertise in Painting & Construction
             </h2>
 
-            {/* Toggle Tabs */}
-            <div style={{
-              display: 'inline-flex',
-              background: '#ffffff',
-              padding: '0.4rem',
-              borderRadius: '9999px',
-              border: '1px solid #e2e8f0',
-              marginTop: '1.75rem',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.04)'
-            }}>
-              <button
-                onClick={() => setActiveTab('painting')}
-                style={{
-                  background: activeTab === 'painting' ? '#b87816' : 'transparent',
-                  color: activeTab === 'painting' ? '#ffffff' : '#64748b',
-                  border: 'none',
-                  borderRadius: '9999px',
-                  padding: '0.65rem 1.75rem',
-                  fontWeight: '700',
-                  fontSize: '0.92rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.25s ease',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
-                }}
-              >
-                <Paintbrush size={16} />
-                <span>Professional Painting Services</span>
-              </button>
-
-              <button
-                onClick={() => setActiveTab('construction')}
-                style={{
-                  background: activeTab === 'construction' ? '#b87816' : 'transparent',
-                  color: activeTab === 'construction' ? '#ffffff' : '#64748b',
-                  border: 'none',
-                  borderRadius: '9999px',
-                  padding: '0.65rem 1.75rem',
-                  fontWeight: '700',
-                  fontSize: '0.92rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.25s ease',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
-                }}
-              >
-                <Building2 size={16} />
-                <span>Construction Services</span>
-              </button>
-            </div>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.75, margin: 0 }}>
+              From protecting exterior walls against Coimbatore weather to executing turnkey villa and commercial projects, our work is backed by almost five decades of on-site discipline.
+            </p>
           </div>
 
-          {/* Active Tab Content */}
-          {activeTab === 'painting' ? (
-            <div>
-              <div style={{
-                background: '#ffffff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '16px',
-                padding: '1.75rem 2rem',
-                marginBottom: '2.5rem',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.02)'
-              }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#111827', marginBottom: '0.5rem' }}>
+          {/* ──────────────────────────────────────────────────────────
+              PART 1: PROFESSIONAL PAINTING SERVICES
+          ────────────────────────────────────────────────────────── */}
+          <div style={{ marginBottom: '5rem' }}>
+            {/* Painting Header Card with Verbatim Intro */}
+            <div style={{
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
+              borderLeft: '5px solid #b87816',
+              borderRadius: '16px',
+              padding: '2.25rem 2.5rem',
+              marginBottom: '2.25rem',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.03)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+                <div style={{
+                  width: '38px', height: '38px', borderRadius: '10px',
+                  background: 'rgba(184,120,22,0.12)', color: '#b87816',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+                  <Paintbrush size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.45rem', fontWeight: '800', color: '#111827', margin: 0 }}>
                   {WHAT_WE_DO.painting.title}
                 </h3>
-                <p style={{ margin: 0, color: '#475569', fontSize: '0.98rem', lineHeight: 1.8 }}>
-                  {WHAT_WE_DO.painting.intro}
-                </p>
               </div>
+              <p style={{ margin: 0, color: '#475569', fontSize: '1.02rem', lineHeight: 1.8 }}>
+                {WHAT_WE_DO.painting.intro}
+              </p>
+            </div>
 
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
-                gap: '1.5rem'
-              }}>
-                {WHAT_WE_DO.painting.services.map((srv, i) => (
+            {/* 6 Painting Service Cards Grid */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
+              gap: '1.5rem'
+            }}>
+              {WHAT_WE_DO.painting.services.map((srv, i) => {
+                const IconComponent = paintingIcons[i] || Paintbrush;
+                return (
                   <div
                     key={i}
                     onClick={() => handleServiceClick(srv.slug)}
@@ -166,7 +137,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
                       border: '1px solid #e2e8f0',
                       cursor: 'pointer',
                       transition: 'all 0.3s ease',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
+                      boxShadow: '0 4px 14px rgba(0,0,0,0.02)',
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'space-between'
@@ -174,62 +145,80 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-4px)';
                       e.currentTarget.style.borderColor = '#b87816';
-                      e.currentTarget.style.boxShadow = '0 12px 25px rgba(184,120,22,0.1)';
+                      e.currentTarget.style.boxShadow = '0 12px 25px rgba(184,120,22,0.12)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
                       e.currentTarget.style.borderColor = '#e2e8f0';
-                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.02)';
+                      e.currentTarget.style.boxShadow = '0 4px 14px rgba(0,0,0,0.02)';
                     }}
                   >
                     <div>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.15rem' }}>
                         <div style={{
-                          width: '42px', height: '42px', borderRadius: '10px',
+                          width: '44px', height: '44px', borderRadius: '12px',
                           background: 'rgba(184,120,22,0.12)', color: '#b87816',
                           display: 'flex', alignItems: 'center', justifyContent: 'center'
                         }}>
-                          <Paintbrush size={20} />
+                          <IconComponent size={21} />
                         </div>
-                        <span style={{ fontSize: '0.8rem', fontWeight: '700', color: '#b87816' }}>
-                          Explore Service →
+                        <span style={{ fontSize: '0.82rem', fontWeight: '700', color: '#b87816', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                          Explore Service <ArrowRight size={13} />
                         </span>
                       </div>
-                      <h4 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#111827', marginBottom: '0.65rem' }}>
+                      <h4 style={{ fontSize: '1.22rem', fontWeight: '800', color: '#111827', marginBottom: '0.65rem', lineHeight: 1.35 }}>
                         {srv.title}
                       </h4>
-                      <p style={{ margin: 0, color: '#64748b', fontSize: '0.94rem', lineHeight: 1.65 }}>
+                      <p style={{ margin: 0, color: '#64748b', fontSize: '0.95rem', lineHeight: 1.7 }}>
                         {srv.desc}
                       </p>
                     </div>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
-          ) : (
-            <div>
-              <div style={{
-                background: '#ffffff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '16px',
-                padding: '1.75rem 2rem',
-                marginBottom: '2.5rem',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.02)'
-              }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#111827', marginBottom: '0.5rem' }}>
+          </div>
+
+          {/* ──────────────────────────────────────────────────────────
+              PART 2: CONSTRUCTION SERVICES
+          ────────────────────────────────────────────────────────── */}
+          <div>
+            {/* Construction Header Card with Verbatim Intro */}
+            <div style={{
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
+              borderLeft: '5px solid #0f172a',
+              borderRadius: '16px',
+              padding: '2.25rem 2.5rem',
+              marginBottom: '2.25rem',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.03)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+                <div style={{
+                  width: '38px', height: '38px', borderRadius: '10px',
+                  background: 'rgba(15,23,42,0.08)', color: '#0f172a',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+                  <Building2 size={20} />
+                </div>
+                <h3 style={{ fontSize: '1.45rem', fontWeight: '800', color: '#111827', margin: 0 }}>
                   {WHAT_WE_DO.construction.title}
                 </h3>
-                <p style={{ margin: 0, color: '#475569', fontSize: '0.98rem', lineHeight: 1.8 }}>
-                  {WHAT_WE_DO.construction.intro}
-                </p>
               </div>
+              <p style={{ margin: 0, color: '#475569', fontSize: '1.02rem', lineHeight: 1.8 }}>
+                {WHAT_WE_DO.construction.intro}
+              </p>
+            </div>
 
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
-                gap: '1.5rem'
-              }}>
-                {WHAT_WE_DO.construction.services.map((srv, i) => (
+            {/* 6 Construction Service Cards Grid */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
+              gap: '1.5rem'
+            }}>
+              {WHAT_WE_DO.construction.services.map((srv, i) => {
+                const IconComponent = constructionIcons[i] || Building2;
+                return (
                   <div
                     key={i}
                     onClick={() => handleServiceClick(null)}
@@ -240,7 +229,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
                       border: '1px solid #e2e8f0',
                       cursor: 'pointer',
                       transition: 'all 0.3s ease',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
+                      boxShadow: '0 4px 14px rgba(0,0,0,0.02)',
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'space-between'
@@ -248,39 +237,39 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-4px)';
                       e.currentTarget.style.borderColor = '#b87816';
-                      e.currentTarget.style.boxShadow = '0 12px 25px rgba(184,120,22,0.1)';
+                      e.currentTarget.style.boxShadow = '0 12px 25px rgba(184,120,22,0.12)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
                       e.currentTarget.style.borderColor = '#e2e8f0';
-                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.02)';
+                      e.currentTarget.style.boxShadow = '0 4px 14px rgba(0,0,0,0.02)';
                     }}
                   >
                     <div>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.15rem' }}>
                         <div style={{
-                          width: '42px', height: '42px', borderRadius: '10px',
+                          width: '44px', height: '44px', borderRadius: '12px',
                           background: 'rgba(184,120,22,0.12)', color: '#b87816',
                           display: 'flex', alignItems: 'center', justifyContent: 'center'
                         }}>
-                          <Building2 size={20} />
+                          <IconComponent size={21} />
                         </div>
-                        <span style={{ fontSize: '0.8rem', fontWeight: '700', color: '#b87816' }}>
-                          Enquire Now →
+                        <span style={{ fontSize: '0.82rem', fontWeight: '700', color: '#b87816', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                          Enquire Now <ArrowRight size={13} />
                         </span>
                       </div>
-                      <h4 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#111827', marginBottom: '0.65rem' }}>
+                      <h4 style={{ fontSize: '1.22rem', fontWeight: '800', color: '#111827', marginBottom: '0.65rem', lineHeight: 1.35 }}>
                         {srv.title}
                       </h4>
-                      <p style={{ margin: 0, color: '#64748b', fontSize: '0.94rem', lineHeight: 1.65 }}>
+                      <p style={{ margin: 0, color: '#64748b', fontSize: '0.95rem', lineHeight: 1.7 }}>
                         {srv.desc}
                       </p>
                     </div>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
-          )}
+          </div>
 
         </div>
       </section>
@@ -288,10 +277,10 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
       {/* ══════════════════════════════════════════════════════════
           WHY PEOPLE IN COIMBATORE CHOOSE US
       ══════════════════════════════════════════════════════════ */}
-      <section style={{ padding: '6rem 1.5rem', background: '#ffffff' }}>
+      <section style={{ padding: '6.5rem 1.5rem', background: '#ffffff' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           
-          <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 3.5rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 4rem' }}>
             <div style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -318,7 +307,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
               Why People in Coimbatore Choose Us
             </h2>
 
-            <p style={{ color: '#475569', fontSize: '1.02rem', lineHeight: 1.75 }}>
+            <p style={{ color: '#475569', fontSize: '1.02rem', lineHeight: 1.75, margin: 0 }}>
               Choosing the right contractor can decide whether your project becomes a happy memory or a stressful experience. Here is why hundreds of families and businesses across the region continue to trust Shanmugam Associates for their painting and construction needs, year after year.
             </p>
           </div>
@@ -383,7 +372,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
       {/* ══════════════════════════════════════════════════════════
           PROJECTS WE HANDLE & AREAS WE SERVE
       ══════════════════════════════════════════════════════════ */}
-      <section style={{ padding: '5.5rem 1.5rem', background: '#090e17', color: '#ffffff' }}>
+      <section style={{ padding: '6rem 1.5rem', background: '#090e17', color: '#ffffff' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           
           <div style={{
@@ -411,21 +400,21 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
                 Our expertise covers a wide range of property types across Tamil Nadu. Whether it is a private home or a large public building, our team approaches every job with the same level of seriousness.
               </p>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem' }}>
                 {PROJECTS_WE_HANDLE.map((proj, idx) => (
                   <span
                     key={idx}
                     style={{
                       background: 'rgba(255,255,255,0.08)',
                       border: '1px solid rgba(255,255,255,0.15)',
-                      padding: '0.5rem 1rem',
+                      padding: '0.55rem 1.1rem',
                       borderRadius: '8px',
-                      fontSize: '0.88rem',
+                      fontSize: '0.9rem',
                       color: '#f1f5f9',
                       fontWeight: '600'
                     }}
                   >
-                    {proj}
+                    ▪ {proj}
                   </span>
                 ))}
               </div>
@@ -495,7 +484,7 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
       {/* ══════════════════════════════════════════════════════════
           HOMEPAGE FREQUENTLY ASKED QUESTIONS
       ══════════════════════════════════════════════════════════ */}
-      <section style={{ padding: '6rem 1.5rem', background: '#ffffff' }}>
+      <section style={{ padding: '6.5rem 1.5rem', background: '#ffffff' }}>
         <div style={{ maxWidth: '960px', margin: '0 auto' }}>
           
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
