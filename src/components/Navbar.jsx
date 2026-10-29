@@ -1,12 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { 
+  ChevronDown, 
+  Menu, 
+  X, 
+  ArrowRight, 
+  Paintbrush, 
+  Home, 
+  Building2, 
+  Building, 
+  Sparkles, 
+  ShieldCheck 
+} from 'lucide-react';
 import { SPECIALIZED_PROVISIONS } from '../data/siteData';
 import logoImg from '../assets/logo/logo3.png';
+
+const provisionIcons = {
+  'interior-painting': Paintbrush,
+  'exterior-painting': Home,
+  'house-painting': Building2,
+  'commercial-painting': Building,
+  'texture-painting': Sparkles,
+  'waterproofing': ShieldCheck
+};
+
+const provisionTaglines = {
+  'interior-painting': 'Luxury emulsions & dust-free finish',
+  'exterior-painting': 'Elastomeric weather-shield & anti-algae',
+  'house-painting': 'Complete villa & apartment solutions',
+  'commercial-painting': 'Offices, showrooms, factories & retail',
+  'texture-painting': 'Royal Play & designer feature walls',
+  'waterproofing': 'Terraces, roofs & structural sealing'
+};
 
 export default function Navbar({ activePage, setActivePage, setSelectedProvision }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const topDropdownRef = useRef(null);
+  const floatingDropdownRef = useRef(null);
+  const hoverTimeoutRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +49,41 @@ export default function Navbar({ activePage, setActivePage, setSelectedProvision
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Click outside to close desktop dropdown reliably
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const isTopInside = topDropdownRef.current && topDropdownRef.current.contains(event.target);
+      const isFloatingInside = floatingDropdownRef.current && floatingDropdownRef.current.contains(event.target);
+      if (!isTopInside && !isFloatingInside) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, []);
+
+  const handleDropdownMouseEnter = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    setDropdownOpen(true);
+  };
+
+  const handleDropdownMouseLeave = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setDropdownOpen(false);
+    }, 150);
+  };
+
+  const handleDropdownToggleClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    setDropdownOpen((prev) => !prev);
+  };
 
   const handleNavClick = (page) => {
     setActivePage(page);
@@ -48,6 +117,145 @@ export default function Navbar({ activePage, setActivePage, setSelectedProvision
     { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contact' }
   ];
+
+  const renderSpecializationsDropdown = () => {
+    if (!dropdownOpen) return null;
+    return (
+      <div
+        style={{
+          position: 'absolute',
+          top: '100%',
+          paddingTop: '8px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 9999,
+          minWidth: '310px',
+          filter: 'drop-shadow(0 18px 40px rgba(0,0,0,0.16))'
+        }}
+      >
+        {/* Subtle top arrow pointer */}
+        <div style={{
+          position: 'absolute',
+          top: '3px',
+          left: '50%',
+          transform: 'translateX(-50%) rotate(45deg)',
+          width: '10px',
+          height: '10px',
+          background: '#ffffff',
+          borderLeft: '1px solid #e2e8f0',
+          borderTop: '1px solid #e2e8f0',
+          zIndex: 1
+        }} />
+
+        <div
+          style={{
+            background: '#ffffff',
+            border: '1px solid #e2e8f0',
+            borderRadius: '16px',
+            padding: '0.65rem',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+            position: 'relative',
+            zIndex: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.2rem'
+          }}
+        >
+          {/* Header pill */}
+          <div style={{
+            padding: '0.45rem 0.85rem 0.55rem',
+            fontSize: '0.74rem',
+            fontWeight: '800',
+            color: '#b87816',
+            letterSpacing: '1.2px',
+            textTransform: 'uppercase',
+            borderBottom: '1px solid #f1f5f9',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between'
+          }}>
+            <span>Specialized Services</span>
+            <span style={{ fontSize: '0.7rem', color: '#94a3b8', fontWeight: '600' }}>6 Provisions</span>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', marginTop: '0.35rem' }}>
+            {SPECIALIZED_PROVISIONS.map((item) => {
+              const Icon = provisionIcons[item.slug] || Paintbrush;
+              const tagline = provisionTaglines[item.slug] || item.tagline;
+              return (
+                <button
+                  key={item.slug}
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleProvisionClick(item.slug);
+                  }}
+                  style={{
+                    textAlign: 'left',
+                    padding: '0.65rem 0.85rem',
+                    borderRadius: '10px',
+                    background: 'transparent',
+                    border: 'none',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    transition: 'all 0.18s ease',
+                    width: '100%'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#fdf8f0';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                  }}
+                >
+                  <div style={{
+                    width: '34px',
+                    height: '34px',
+                    borderRadius: '8px',
+                    background: 'rgba(184, 120, 22, 0.12)',
+                    color: '#b87816',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0
+                  }}>
+                    <Icon size={17} />
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{
+                      fontSize: '0.88rem',
+                      fontWeight: '700',
+                      color: '#111827',
+                      lineHeight: 1.25,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between'
+                    }}>
+                      <span>{item.name}</span>
+                      <ArrowRight size={13} color="#b87816" opacity={0.7} />
+                    </div>
+                    <div style={{
+                      fontSize: '0.74rem',
+                      color: '#64748b',
+                      lineHeight: 1.3,
+                      marginTop: '0.15rem',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis'
+                    }}>
+                      {tagline}
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <>
@@ -117,20 +325,22 @@ export default function Navbar({ activePage, setActivePage, setSelectedProvision
                 return (
                   <div
                     key={link.id}
+                    ref={topDropdownRef}
                     style={{ position: 'relative' }}
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
+                    onMouseEnter={handleDropdownMouseEnter}
+                    onMouseLeave={handleDropdownMouseLeave}
                   >
                     <button
-                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                      type="button"
+                      onClick={handleDropdownToggleClick}
                       style={{
-                        background: isDropdownActive ? '#fdf6ec' : 'transparent',
-                        color: isDropdownActive ? '#b87816' : '#4b5563',
+                        background: (isDropdownActive || dropdownOpen) ? '#fdf6ec' : 'transparent',
+                        color: (isDropdownActive || dropdownOpen) ? '#b87816' : '#4b5563',
                         border: 'none',
                         borderRadius: '9999px',
                         padding: '0.5rem 1.15rem',
                         fontSize: '0.92rem',
-                        fontWeight: isDropdownActive ? '700' : '500',
+                        fontWeight: (isDropdownActive || dropdownOpen) ? '700' : '500',
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
@@ -141,76 +351,31 @@ export default function Navbar({ activePage, setActivePage, setSelectedProvision
                         lineHeight: 1
                       }}
                       onMouseEnter={(e) => {
-                        if (!isDropdownActive) {
+                        if (!isDropdownActive && !dropdownOpen) {
                           e.currentTarget.style.color = '#111827';
                           e.currentTarget.style.background = '#f9fafb';
                         }
                       }}
                       onMouseLeave={(e) => {
-                        if (!isDropdownActive) {
+                        if (!isDropdownActive && !dropdownOpen) {
                           e.currentTarget.style.color = '#4b5563';
                           e.currentTarget.style.background = 'transparent';
                         }
                       }}
                     >
                       <span>{link.label}</span>
-                      <ChevronDown size={14} style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'none', transition: '0.2s' }} />
+                      <ChevronDown 
+                        size={14} 
+                        style={{ 
+                          transform: dropdownOpen ? 'rotate(180deg)' : 'none', 
+                          transition: 'transform 0.2s ease',
+                          color: (isDropdownActive || dropdownOpen) ? '#b87816' : '#64748b'
+                        }} 
+                      />
                     </button>
 
                     {/* Dropdown Menu */}
-                    {dropdownOpen && (
-                      <div style={{
-                        position: 'absolute',
-                        top: 'calc(100% + 8px)',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        background: '#ffffff',
-                        border: '1px solid #e5e7eb',
-                        borderRadius: '16px',
-                        boxShadow: '0 12px 30px rgba(0,0,0,0.12)',
-                        padding: '0.5rem',
-                        minWidth: '220px',
-                        zIndex: 1100,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '0.2rem',
-                        whiteSpace: 'nowrap'
-                      }}>
-                        {SPECIALIZED_PROVISIONS.map((item) => (
-                          <button
-                            key={item.slug}
-                            onClick={() => handleProvisionClick(item.slug)}
-                            style={{
-                              textAlign: 'left',
-                              padding: '0.65rem 1rem',
-                              borderRadius: '10px',
-                              background: 'transparent',
-                              color: '#374151',
-                              fontSize: '0.9rem',
-                              fontWeight: '500',
-                              border: 'none',
-                              cursor: 'pointer',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'space-between',
-                              transition: 'all 0.15s ease',
-                              whiteSpace: 'nowrap'
-                            }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.background = '#fdf6ec';
-                              e.currentTarget.style.color = '#b87816';
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.background = 'transparent';
-                              e.currentTarget.style.color = '#374151';
-                            }}
-                          >
-                            <span>{item.name}</span>
-                            <ArrowRight size={13} opacity={0.6} />
-                          </button>
-                        ))}
-                      </div>
-                    )}
+                    {renderSpecializationsDropdown()}
                   </div>
                 );
               }
@@ -382,20 +547,22 @@ export default function Navbar({ activePage, setActivePage, setSelectedProvision
                 return (
                   <div
                     key={link.id}
+                    ref={floatingDropdownRef}
                     style={{ position: 'relative' }}
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
+                    onMouseEnter={handleDropdownMouseEnter}
+                    onMouseLeave={handleDropdownMouseLeave}
                   >
                     <button
-                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                      type="button"
+                      onClick={handleDropdownToggleClick}
                       style={{
-                        background: isDropdownActive ? '#fdf6ec' : 'transparent',
-                        color: isDropdownActive ? '#b87816' : '#4b5563',
+                        background: (isDropdownActive || dropdownOpen) ? '#fdf6ec' : 'transparent',
+                        color: (isDropdownActive || dropdownOpen) ? '#b87816' : '#4b5563',
                         border: 'none',
                         borderRadius: '9999px',
                         padding: '0.45rem 0.9rem',
                         fontSize: '0.88rem',
-                        fontWeight: isDropdownActive ? '700' : '500',
+                        fontWeight: (isDropdownActive || dropdownOpen) ? '700' : '500',
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
@@ -406,76 +573,31 @@ export default function Navbar({ activePage, setActivePage, setSelectedProvision
                         lineHeight: 1
                       }}
                       onMouseEnter={(e) => {
-                        if (!isDropdownActive) {
+                        if (!isDropdownActive && !dropdownOpen) {
                           e.currentTarget.style.color = '#111827';
                           e.currentTarget.style.background = '#f3f4f6';
                         }
                       }}
                       onMouseLeave={(e) => {
-                        if (!isDropdownActive) {
+                        if (!isDropdownActive && !dropdownOpen) {
                           e.currentTarget.style.color = '#4b5563';
                           e.currentTarget.style.background = 'transparent';
                         }
                       }}
                     >
                       <span>{link.label}</span>
-                      <ChevronDown size={13} style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'none', transition: '0.2s' }} />
+                      <ChevronDown 
+                        size={13} 
+                        style={{ 
+                          transform: dropdownOpen ? 'rotate(180deg)' : 'none', 
+                          transition: 'transform 0.2s ease',
+                          color: (isDropdownActive || dropdownOpen) ? '#b87816' : '#64748b'
+                        }} 
+                      />
                     </button>
 
                     {/* Floating Dropdown Menu */}
-                    {dropdownOpen && (
-                      <div style={{
-                        position: 'absolute',
-                        top: 'calc(100% + 10px)',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        background: '#ffffff',
-                        border: '1px solid #e5e7eb',
-                        borderRadius: '16px',
-                        boxShadow: '0 12px 32px rgba(0,0,0,0.14)',
-                        padding: '0.5rem',
-                        minWidth: '220px',
-                        zIndex: 1100,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '0.2rem',
-                        whiteSpace: 'nowrap'
-                      }}>
-                        {SPECIALIZED_PROVISIONS.map((item) => (
-                          <button
-                            key={item.slug}
-                            onClick={() => handleProvisionClick(item.slug)}
-                            style={{
-                              textAlign: 'left',
-                              padding: '0.6rem 0.95rem',
-                              borderRadius: '10px',
-                              background: 'transparent',
-                              color: '#374151',
-                              fontSize: '0.88rem',
-                              fontWeight: '500',
-                              border: 'none',
-                              cursor: 'pointer',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'space-between',
-                              transition: 'all 0.15s ease',
-                              whiteSpace: 'nowrap'
-                            }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.background = '#fdf6ec';
-                              e.currentTarget.style.color = '#b87816';
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.background = 'transparent';
-                              e.currentTarget.style.color = '#374151';
-                            }}
-                          >
-                            <span>{item.name}</span>
-                            <ArrowRight size={13} opacity={0.6} />
-                          </button>
-                        ))}
-                      </div>
-                    )}
+                    {renderSpecializationsDropdown()}
                   </div>
                 );
               }
@@ -596,38 +718,80 @@ export default function Navbar({ activePage, setActivePage, setSelectedProvision
         }}>
           {navLinks.map((link) => {
             if (link.isDropdown) {
+              const isDropdownActive = activePage === 'provision';
               return (
-                <div key={link.id} style={{ padding: '0.3rem 0' }}>
-                  <div style={{
-                    fontSize: '0.78rem',
-                    fontWeight: '700',
-                    color: '#b87816',
-                    letterSpacing: '1px',
-                    textTransform: 'uppercase',
-                    marginBottom: '0.4rem'
-                  }}>
-                    SPECIALIZATIONS
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem', paddingLeft: '0.5rem' }}>
-                    {SPECIALIZED_PROVISIONS.map((item) => (
-                      <button
-                        key={item.slug}
-                        onClick={() => handleProvisionClick(item.slug)}
-                        style={{
-                          textAlign: 'left',
-                          background: 'transparent',
-                          border: 'none',
-                          color: '#374151',
-                          padding: '0.35rem 0',
-                          fontSize: '0.9rem',
-                          fontWeight: '500',
-                          cursor: 'pointer'
-                        }}
-                      >
-                        {item.name}
-                      </button>
-                    ))}
-                  </div>
+                <div key={link.id} style={{ borderBottom: '1px solid #f1f5f9', paddingBottom: '0.5rem' }}>
+                  <button
+                    type="button"
+                    onClick={() => setMobileDropdownOpen((prev) => !prev)}
+                    style={{
+                      width: '100%',
+                      textAlign: 'left',
+                      background: (mobileDropdownOpen || isDropdownActive) ? '#fdf6ec' : 'transparent',
+                      color: (mobileDropdownOpen || isDropdownActive) ? '#b87816' : '#1f2937',
+                      border: 'none',
+                      borderRadius: '8px',
+                      padding: '0.65rem 0.85rem',
+                      fontSize: '0.94rem',
+                      fontWeight: '700',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    <span>Specializations</span>
+                    <ChevronDown
+                      size={18}
+                      style={{
+                        transform: mobileDropdownOpen ? 'rotate(180deg)' : 'none',
+                        transition: 'transform 0.25s ease',
+                        color: (mobileDropdownOpen || isDropdownActive) ? '#b87816' : '#64748b'
+                      }}
+                    />
+                  </button>
+
+                  {mobileDropdownOpen && (
+                    <div style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '0.35rem',
+                      padding: '0.5rem 0 0.25rem 0.6rem'
+                    }}>
+                      {SPECIALIZED_PROVISIONS.map((item) => {
+                        const Icon = provisionIcons[item.slug] || Paintbrush;
+                        return (
+                          <button
+                            key={item.slug}
+                            type="button"
+                            onClick={() => handleProvisionClick(item.slug)}
+                            style={{
+                              textAlign: 'left',
+                              background: '#f8fafc',
+                              border: '1px solid #eef2f6',
+                              borderRadius: '8px',
+                              color: '#334155',
+                              padding: '0.6rem 0.85rem',
+                              fontSize: '0.88rem',
+                              fontWeight: '600',
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
+                              gap: '0.5rem'
+                            }}
+                          >
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                              <Icon size={16} color="#b87816" />
+                              <span>{item.name}</span>
+                            </span>
+                            <ArrowRight size={13} color="#b87816" />
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               );
             }
