@@ -30,7 +30,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       subtitle: "Transforming interiors with dust-free application and washable, velvet-smooth luxury finishes.",
       icon: Paintbrush,
       badge: "Most Popular",
-      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/services/exterior-painting-facade.jpg",
       overview: "Our interior painting services are tailored to create stunning, healthy, and serene living environments. Using low-VOC and zero-odor paints, our experienced team ensures your family or office staff can occupy the space comfortably immediately after completion.",
       specs: [
         { label: "Recommended Brands", value: "Asian Paints Royale, Berger Silk Glamor, Nippon Spotless" },
@@ -59,7 +59,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       subtitle: "Heavy-duty elastomeric coatings designed to withstand extreme tropical sunlight and monsoon rains.",
       icon: Home,
       badge: "High Durability",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/services/waterproofing-terrace-works.jpg",
       overview: "Exterior walls endure scorching UV radiation, biological growth, and monsoon rains. Our exterior weather-proofing solutions utilize modified acrylic elastomers that bridge structural micro-cracks and reflect heat, keeping your building up to 5°C cooler.",
       specs: [
         { label: "Recommended Brands", value: "Asian Paints Apex Ultima Protek, Berger WeatherCoat Long Life, Dulux Weathershield" },
@@ -88,7 +88,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       subtitle: "Full-home transformation packages with dedicated site engineers, color consultations, and strict milestones.",
       icon: Building,
       badge: "Turnkey",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/projects/villas-sunrise.jpg",
       overview: "Designed for discerning homeowners, our turnkey residential packages cover complete interior, exterior, wood polishing, metal gates, and decorative accents. We assign a dedicated site supervisor to ensure daily updates and timely handover.",
       specs: [
         { label: "Scope Coverage", value: "Interior + Exterior + Wood Enamel + Metal PU" },
@@ -117,7 +117,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       subtitle: "Large-format painting for tech parks, commercial complexes, healthcare centers, and industrial plants.",
       icon: Building2,
       badge: "High Volume",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/projects/apartments-block-h.jpg",
       overview: "Commercial properties demand strict compliance with industrial safety protocols, heavy durability, and zero disruption to business operations. Shanmugam Associates provides certified scaffolding, night-shift crews, and corrosion-resistant coatings.",
       specs: [
         { label: "Applications", value: "Offices, Retail Hubs, Hospitals, Tech Parks, Warehouses" },
@@ -146,7 +146,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       subtitle: "Artisanal textures, metallic glazes, Venetian plaster, and custom decorative accents.",
       icon: Layers,
       badge: "Artisanal",
-      image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/services/decorative-jali-finishing.jpg",
       overview: "Elevate feature walls into stunning conversation pieces. Our master artisans craft bespoke finishes including Italian stucco, metallic washes, raw concrete aesthetics, sandstone textures, and geometrical stencil patterns.",
       specs: [
         { label: "Popular Styles", value: "Venetian Stucco, Raw Concrete, Metallic Spatula, Dune Sand" },
@@ -175,7 +175,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       subtitle: "The unseen foundation of every durable paint job: damp proofing, crack injection, and laser sanding.",
       icon: Brush,
       badge: "Essential",
-      image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/services/waterproofing-terrace-works.jpg",
       overview: "90% of paint failures occur due to improper surface preparation or hidden wall moisture. At Shanmugam Associates, we treat every wall as an engineering substrate — eliminating moisture seepage, efflorescence, and hollow plaster before applying any paint.",
       specs: [
         { label: "Moisture Diagnosis", value: "Non-destructive digital pin moisture mapping" },
@@ -204,7 +204,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       subtitle: "Seamless, chemical-resistant, and mirror-finish epoxy floors for parking, showrooms, and cleanrooms.",
       icon: ShieldCheck,
       badge: "Heavy Duty",
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/services/civil-structural-finishing.jpg",
       overview: "Transform concrete floors into high-performance, seamless surfaces that resist heavy machinery, oil spills, and continuous pedestrian traffic. Our self-leveling epoxy and polyurethane flooring solutions combine durability with architectural aesthetics.",
       specs: [
         { label: "Thickness Range", value: "1.0 mm to 4.0 mm self-leveling resin" },
@@ -233,7 +233,7 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
       subtitle: "End-to-end project management from architectural design consultation to guaranteed on-time delivery.",
       icon: Palette,
       badge: "Advisory",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/hero/home-hero-apartments-mountains.jpg",
       overview: "Avoid guesswork with Shanmugam Associates' comprehensive engineering consultation. We provide laser-accurate site estimations, material compatibility analysis, 3D color mock-ups, and milestone-linked payment schedules.",
       specs: [
         { label: "Diagnostic Tools", value: "Digital moisture meters, laser distance meters, DFT gauges" },
@@ -382,10 +382,207 @@ export default function ServicesPage({ onNavigatePage, initialServiceId }) {
         </div>
       </section>
 
+
+      {/* ═══════════════════════════════════════════════════════════════
+          CORE SERVICES - 4 ALTERNATING ROWS (PDF Page 4)
+      ═══════════════════════════════════════════════════════════════ */}
+      <section style={{ maxWidth: '1280px', margin: '0 auto', padding: '5.5rem 1.5rem 3rem' }}>
+        
+        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 4.5rem' }}>
+          <div style={{
+            fontSize: '0.82rem',
+            fontWeight: '700',
+            color: '#b87816',
+            letterSpacing: '2.5px',
+            textTransform: 'uppercase',
+            marginBottom: '0.6rem'
+          }}>
+            Our Scope of Work
+          </div>
+          <h2 style={{
+            fontSize: 'clamp(2.2rem, 4vw, 3rem)',
+            fontWeight: '800',
+            color: '#111827',
+            lineHeight: 1.2,
+            marginBottom: '1rem'
+          }}>
+            Our services
+          </h2>
+          <p style={{ fontSize: '1.1rem', color: '#64748b', lineHeight: 1.7, margin: 0 }}>
+            Painting, waterproofing, decorative finishing and civil works for homes and commercial buildings.
+          </p>
+        </div>
+
+        {/* 4 Alternating Service Rows */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4.5rem' }}>
+          {[
+            {
+              num: '01',
+              title: 'Exterior & interior painting',
+              desc: 'Weather-resistant exterior coats and clean interior finishes for villas, apartments and offices.',
+              image: '/images/services/exterior-painting-facade.jpg',
+              reverse: false,
+              serviceId: 2
+            },
+            {
+              num: '02',
+              title: 'Waterproofing & terrace works',
+              desc: 'Terrace and slab waterproofing to protect buildings through the monsoon.',
+              image: '/images/services/waterproofing-terrace-works.jpg',
+              reverse: true,
+              serviceId: 6
+            },
+            {
+              num: '03',
+              title: 'Decorative & facade finishing',
+              desc: 'Detailed finishing for jali panels, columns, porches and entrance structures.',
+              image: '/images/services/decorative-jali-finishing.jpg',
+              reverse: false,
+              serviceId: 5
+            },
+            {
+              num: '04',
+              title: 'Civil & structural works',
+              desc: 'Building and finishing work from structure to completion.',
+              image: '/images/services/civil-structural-finishing.jpg',
+              reverse: true,
+              serviceId: 7
+            }
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))',
+                gap: '3.5rem',
+                alignItems: 'center'
+              }}
+            >
+              {/* Image Column */}
+              <div style={{ order: item.reverse ? 2 : 1 }}>
+                <div style={{
+                  position: 'relative',
+                  borderRadius: '20px',
+                  overflow: 'hidden',
+                  boxShadow: '0 20px 45px rgba(0,0,0,0.1)',
+                  aspectRatio: '16 / 11'
+                }}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                      transition: 'transform 0.6s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.04)'}
+                    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                  />
+                </div>
+              </div>
+
+              {/* Text Column */}
+              <div style={{ order: item.reverse ? 1 : 2 }}>
+                <div style={{
+                  display: 'inline-block',
+                  background: 'rgba(184, 120, 22, 0.1)',
+                  color: '#b87816',
+                  fontWeight: '800',
+                  fontSize: '0.85rem',
+                  padding: '0.35rem 0.85rem',
+                  borderRadius: '6px',
+                  marginBottom: '1rem',
+                  letterSpacing: '1px'
+                }}>
+                  {item.num}
+                </div>
+
+                <h3 style={{
+                  fontSize: 'clamp(1.75rem, 3vw, 2.3rem)',
+                  fontWeight: '800',
+                  color: '#111827',
+                  lineHeight: 1.25,
+                  marginBottom: '1.25rem'
+                }}>
+                  {item.title}
+                </h3>
+
+                <p style={{
+                  fontSize: '1.08rem',
+                  color: '#475569',
+                  lineHeight: 1.8,
+                  marginBottom: '2rem'
+                }}>
+                  {item.desc}
+                </p>
+
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <button
+                    onClick={() => onNavigatePage && onNavigatePage('contact')}
+                    style={{
+                      background: '#b87816',
+                      color: '#ffffff',
+                      border: 'none',
+                      padding: '0.85rem 1.85rem',
+                      borderRadius: '8px',
+                      fontWeight: '700',
+                      fontSize: '0.98rem',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 14px rgba(184,120,22,0.3)',
+                      transition: 'all 0.25s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.5rem'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.background = '#9e640e'}
+                    onMouseLeave={(e) => e.currentTarget.style.background = '#b87816'}
+                  >
+                    <span>Request a quote</span>
+                    <ArrowRight size={16} />
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setSelectedServiceId(item.serviceId);
+                      const el = document.getElementById('interactive-services');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    style={{
+                      background: '#ffffff',
+                      color: '#475569',
+                      border: '1px solid #cbd5e1',
+                      padding: '0.85rem 1.5rem',
+                      borderRadius: '8px',
+                      fontWeight: '600',
+                      fontSize: '0.94rem',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = '#b87816';
+                      e.currentTarget.style.color = '#b87816';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = '#cbd5e1';
+                      e.currentTarget.style.color = '#475569';
+                    }}
+                  >
+                    View Specifications
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </section>
+
       {/* ═══════════════════════════════════════════════════════════════
           INTERACTIVE SERVICES DEEP DIVE (Master List & Full Specs)
       ═══════════════════════════════════════════════════════════════ */}
-      <section style={{ maxWidth: '1360px', margin: '0 auto', padding: '5rem 1.5rem' }}>
+      <section id="interactive-services" style={{ maxWidth: '1360px', margin: '0 auto', padding: '5rem 1.5rem' }}>
         
         {/* Section Title */}
         <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 3.5rem auto' }}>

@@ -156,7 +156,9 @@ export default function Footer({ onNavigatePage, onSelectProvision }) {
                 { label: '09. Contact & Free Inspection', page: 'contact' },
                 { label: '10. Frequently Asked Questions', page: 'faq' },
                 { label: '11. Blog & Property Insights', page: 'blog' },
-                { label: 'Completed Projects', page: 'projects' }
+                { label: 'Our Services', page: 'services' },
+                { label: 'Completed Projects', page: 'projects' },
+                { label: 'Project Gallery', page: 'gallery' }
               ].map((item, idx) => (
                 <li key={idx}>
                   <button

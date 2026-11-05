@@ -33,25 +33,25 @@ export const HERO_SLIDES = [
     id: 1,
     title: "COIMBATORE'S TRUSTED PAINTING & CONSTRUCTION COMPANY SINCE 1977",
     subtitle: "Building Trust Through Quality Construction & Painting for Nearly Five Decades",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=1600&auto=format&fit=crop"
+    image: "/images/hero/home-hero-apartments-mountains.jpg"
   },
   {
     id: 2,
     title: "EXCELLENCE IN STRUCTURAL CRAFTSMANSHIP",
     subtitle: "Villas, apartments, commercial landmarks, and government infrastructure built with precision and integrity.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop"
+    image: "/images/hero/home-hero-alt-aerial-villas.jpg"
   },
   {
     id: 3,
     title: "OVER 2.7 MILLION SQ. FT. PAINTED",
     subtitle: "From luxury residences to high-rise campuses, delivering flawless smooth finishes that stand the test of time.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
+    image: "/images/projects/apartments-block-h.jpg"
   },
   {
     id: 4,
     title: "WEATHER-PROOF & WATERPROOFING SOLUTIONS",
     subtitle: "Protecting properties from Coimbatore's harsh sun, heavy rain, and constant dust with high-performance systems.",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1600&auto=format&fit=crop"
+    image: "/images/services/waterproofing-terrace-works.jpg"
   }
 ];
 
@@ -268,7 +268,7 @@ export const SPECIALIZED_PROVISIONS = [
     tagline: "Smooth Finish, Clean Work, and Long-Lasting Colour",
     seoTitle: "Interior Painting Services in Coimbatore | Shanmugam Associates",
     metaDesc: "Professional interior painting for homes, offices and apartments in Coimbatore. Smooth finish, clean work, and long-lasting colour. Get a free painting quote.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/projects/flats-glass-balconies.jpg",
     highlights: ["Dust-Free Preparation & Sanding", "Even Coats & Clean Edges", "Healthy, Low-Odor Paints"]
   },
   {
@@ -278,7 +278,7 @@ export const SPECIALIZED_PROVISIONS = [
     tagline: "Weatherproof Paint Solutions Built for Coimbatore Weather",
     seoTitle: "Exterior Painting Services in Coimbatore | Weatherproof Paint Solutions",
     metaDesc: "Protect your home or building from sun, rain and dust with expert exterior painting in Coimbatore. Shanmugam Associates uses weather-resistant paints that last longer.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/services/exterior-painting-facade.jpg",
     highlights: ["Resists Heavy Monsoon Rain & Heat", "Elastomeric Crack-Bridging", "Extended Building Life"]
   },
   {
@@ -288,7 +288,7 @@ export const SPECIALIZED_PROVISIONS = [
     tagline: "Complete Home Painting Solutions — New & Repainting",
     seoTitle: "House Painting Services in Coimbatore | New & Repaint Solutions",
     metaDesc: "From new house painting to repainting old homes, Shanmugam Associates offers complete house painting solutions in Coimbatore at fair, transparent prices.",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/projects/villas-sunrise.jpg",
     highlights: ["New House & Repainting Packages", "Villas & Apartment Blocks", "Budget-Friendly & On-Time"]
   },
   {
@@ -298,7 +298,7 @@ export const SPECIALIZED_PROVISIONS = [
     tagline: "Offices, Showrooms, Hospitals & Factories",
     seoTitle: "Commercial Painting Contractors in Coimbatore | Offices, Shops & Factories",
     metaDesc: "Give your office, showroom or factory a professional look with Shanmugam Associates' commercial painting services in Coimbatore. Reliable, tidy, on-time work.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/projects/hospital-aravind-eye.jpg",
     highlights: ["Minimal Disruption to Business", "Washable & Durable Formulations", "Government Project Experience"]
   },
   {
@@ -308,7 +308,7 @@ export const SPECIALIZED_PROVISIONS = [
     tagline: "Royal Play & Designer Wall Finishes",
     seoTitle: "Texture Painting Services in Coimbatore | Royal Play & Designer Wall Finishes",
     metaDesc: "Add style to your walls with texture painting in Coimbatore. Royal Play designs, feature walls and designer finishes by Shanmugam Associates.",
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/services/decorative-jali-finishing.jpg",
     highlights: ["Royal Play & Custom Textures", "Unique Feature Wall Accents", "Long-Lasting High-End Look"]
   },
   {
@@ -318,7 +318,7 @@ export const SPECIALIZED_PROVISIONS = [
     tagline: "Terrace, Roof & Wall Solutions",
     seoTitle: "Waterproofing Services in Coimbatore | Terrace, Roof & Wall Solutions",
     metaDesc: "Stop water leakage and damp walls before they damage your building. Shanmugam Associates offers reliable waterproofing services across Coimbatore.",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/services/waterproofing-terrace-works.jpg",
     highlights: ["Terrace & Roof Waterproofing", "Dampness & Wall Seepage Fix", "Structural Protection"]
   }
 ];

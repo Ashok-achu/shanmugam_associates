@@ -113,6 +113,7 @@ export default function Navbar({ activePage, setActivePage, setSelectedProvision
     { id: 'services', label: 'Services' },
     { id: 'provision', label: 'Specializations', isDropdown: true },
     { id: 'projects', label: 'Projects' },
+    { id: 'gallery', label: 'Gallery' },
     { id: 'faq', label: 'FAQ' },
     { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contact' }

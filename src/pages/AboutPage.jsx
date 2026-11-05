@@ -27,7 +27,9 @@ export default function AboutPage({ onNavigatePage }) {
           ABOUT HERO BANNER
       ══════════════════════════════════════════════════════════ */}
       <section className="page-hero-section" style={{
-        background: 'linear-gradient(135deg, #090e17 0%, #111827 60%, #1e293b 100%)',
+        background: 'linear-gradient(rgba(9, 14, 23, 0.84), rgba(17, 24, 39, 0.9)), url(/images/hero/home-hero-alt-aerial-villas.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         color: '#ffffff',
         padding: '5.5rem 1.5rem 4.5rem',
         borderBottom: '1px solid rgba(255,255,255,0.08)',
@@ -133,33 +135,63 @@ export default function AboutPage({ onNavigatePage }) {
             </div>
           </div>
 
-          {/* Right Visual Highlight Box */}
-          <div>
+          {/* Right Visual Highlight Box with 2 Story Images */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div style={{
               position: 'relative',
               borderRadius: '20px',
               overflow: 'hidden',
-              boxShadow: '0 25px 60px rgba(0,0,0,0.12)'
+              boxShadow: '0 20px 50px rgba(0,0,0,0.12)'
             }}>
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop"
-                alt="Shanmugam Associates Construction and Painting"
-                style={{ width: '100%', height: '440px', objectFit: 'cover', display: 'block' }}
+                src="/images/about/about-villas-sunrise.jpg"
+                alt="Shanmugam Associates Residential Villas"
+                style={{ width: '100%', height: '280px', objectFit: 'cover', display: 'block' }}
               />
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(to top, rgba(15,23,42,0.88) 0%, transparent 60%)',
+                background: 'linear-gradient(to top, rgba(15,23,42,0.85) 0%, transparent 60%)',
                 display: 'flex',
                 alignItems: 'flex-end',
-                padding: '2rem'
+                padding: '1.5rem'
               }}>
                 <div style={{ color: '#ffffff' }}>
-                  <div style={{ fontSize: '2rem', fontWeight: '800', color: '#f59e0b', marginBottom: '0.25rem' }}>
-                    2.7 Million+ Sq. Ft.
+                  <div style={{ fontSize: '1.4rem', fontWeight: '800', color: '#f59e0b', marginBottom: '0.2rem' }}>
+                    Residential Villa Craftsmanship
                   </div>
-                  <div style={{ fontSize: '0.94rem', color: '#cbd5e1' }}>
-                    Painted in a single milestone year across Tamil Nadu
+                  <div style={{ fontSize: '0.86rem', color: '#cbd5e1' }}>
+                    Custom homes built and finished with nearly 50 years of discipline
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{
+              position: 'relative',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: '0 20px 50px rgba(0,0,0,0.12)'
+            }}>
+              <img
+                src="/images/about/about-community-hall.jpg"
+                alt="Shanmugam Associates Community Infrastructure"
+                style={{ width: '100%', height: '240px', objectFit: 'cover', display: 'block' }}
+              />
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to top, rgba(15,23,42,0.85) 0%, transparent 60%)',
+                display: 'flex',
+                alignItems: 'flex-end',
+                padding: '1.5rem'
+              }}>
+                <div style={{ color: '#ffffff' }}>
+                  <div style={{ fontSize: '1.4rem', fontWeight: '800', color: '#f59e0b', marginBottom: '0.2rem' }}>
+                    Public & Community Works
+                  </div>
+                  <div style={{ fontSize: '0.86rem', color: '#cbd5e1' }}>
+                    Community halls, institutions, and civic infrastructure
                   </div>
                 </div>
               </div>
@@ -170,22 +202,132 @@ export default function AboutPage({ onNavigatePage }) {
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '1rem',
-              marginTop: '1.25rem'
+              marginTop: '0.5rem'
             }}>
-              <div style={{ background: '#f8fafc', padding: '1.2rem', borderRadius: '12px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
-                <div style={{ fontSize: '1.6rem', fontWeight: '800', color: '#b87816' }}>1977</div>
-                <div style={{ fontSize: '0.78rem', color: '#64748b', fontWeight: '600' }}>FOUNDED</div>
+              <div style={{ background: '#f8fafc', padding: '1.1rem', borderRadius: '12px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
+                <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#b87816' }}>1977</div>
+                <div style={{ fontSize: '0.76rem', color: '#64748b', fontWeight: '600' }}>FOUNDED</div>
               </div>
-              <div style={{ background: '#f8fafc', padding: '1.2rem', borderRadius: '12px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
-                <div style={{ fontSize: '1.6rem', fontWeight: '800', color: '#b87816' }}>2nd Gen</div>
-                <div style={{ fontSize: '0.78rem', color: '#64748b', fontWeight: '600' }}>LEADERSHIP</div>
+              <div style={{ background: '#f8fafc', padding: '1.1rem', borderRadius: '12px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
+                <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#b87816' }}>2nd Gen</div>
+                <div style={{ fontSize: '0.76rem', color: '#64748b', fontWeight: '600' }}>LEADERSHIP</div>
               </div>
-              <div style={{ background: '#f8fafc', padding: '1.2rem', borderRadius: '12px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
-                <div style={{ fontSize: '1.6rem', fontWeight: '800', color: '#b87816' }}>8+</div>
-                <div style={{ fontSize: '0.78rem', color: '#64748b', fontWeight: '600' }}>CITIES SERVED</div>
+              <div style={{ background: '#f8fafc', padding: '1.1rem', borderRadius: '12px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
+                <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#b87816' }}>8+</div>
+                <div style={{ fontSize: '0.76rem', color: '#64748b', fontWeight: '600' }}>CITIES SERVED</div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+
+      {/* ══════════════════════════════════════════════════════════
+          WHERE WE WORK / SECTORS WE SERVE (PDF Page 3)
+      ══════════════════════════════════════════════════════════ */}
+      <section style={{ background: '#f8fafc', padding: '5.5rem 1.5rem', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          
+          <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 3.5rem' }}>
+            <div style={{
+              fontSize: '0.82rem',
+              fontWeight: '700',
+              color: '#b87816',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+              marginBottom: '0.5rem'
+            }}>
+              Sectors We Serve
+            </div>
+            <h2 style={{
+              fontSize: 'clamp(2rem, 3.5vw, 2.7rem)',
+              fontWeight: '800',
+              color: '#111827',
+              lineHeight: 1.25,
+              marginBottom: '1rem'
+            }}>
+              Where We Work
+            </h2>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.75 }}>
+              From individual luxury homes to large public institutions, we bring the same quality standards and discipline to every sector across Coimbatore and Tamil Nadu.
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: '1.5rem'
+          }}>
+            {[
+              {
+                title: 'Villas',
+                image: '/images/projects/villas-sunrise.jpg',
+                desc: 'Independent homes, luxury bungalows, and private residential communities.'
+              },
+              {
+                title: 'Apartments',
+                image: '/images/projects/apartments-block-h.jpg',
+                desc: 'Multi-storey residential towers, housing societies, and redevelopment projects.'
+              },
+              {
+                title: 'Hospitals & institutions',
+                image: '/images/projects/hospital-aravind-eye.jpg',
+                desc: 'Healthcare centers, educational campuses, schools, and government infrastructure.'
+              },
+              {
+                title: 'Gated communities',
+                image: '/images/projects/gated-community-entrance.jpg',
+                desc: 'Grand entrance arches, security portals, clubhouses, and internal boulevards.'
+              }
+            ].map((sector, idx) => (
+              <div
+                key={idx}
+                style={{
+                  background: '#ffffff',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  border: '1px solid #e2e8f0',
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.03)',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 12px 28px rgba(184,120,22,0.12)';
+                  const img = e.currentTarget.querySelector('img');
+                  if (img) img.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.03)';
+                  const img = e.currentTarget.querySelector('img');
+                  if (img) img.style.transform = 'scale(1)';
+                }}
+              >
+                <div style={{ height: '210px', overflow: 'hidden' }}>
+                  <img
+                    src={sector.image}
+                    alt={sector.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                      transition: 'transform 0.5s ease'
+                    }}
+                  />
+                </div>
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#111827', marginBottom: '0.5rem' }}>
+                    {sector.title}
+                  </h3>
+                  <p style={{ color: '#64748b', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>
+                    {sector.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 

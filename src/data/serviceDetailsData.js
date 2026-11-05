@@ -7,7 +7,7 @@ export const SERVICE_DETAILS_DATA = {
     seoTitle: "Interior Painting Services in Coimbatore | Shanmugam Associates",
     metaDesc: "Professional interior painting for homes, offices and apartments in Coimbatore. Smooth finish, clean work, and long-lasting colour. Get a free painting quote.",
     ctaText: "Call for a free interior painting quote in Coimbatore. 94435 22285",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/projects/flats-glass-balconies.jpg",
     introParagraphs: [
       "The inside of your home should feel warm, calm, and welcoming - not tired, dull, or faded. Over time, even the best-painted walls collect scuff marks, small cracks, and patches where the colour has changed because of sunlight or moisture. Our interior painting service in Coimbatore is built around one simple idea - giving your rooms a fresh, clean look using good quality paint and careful, patient workmanship, without disturbing your daily routine more than necessary.",
       "Many homeowners delay interior painting because they worry about the mess, the smell, or the days lost waiting for furniture to be moved back. Our team is trained to work in a way that reduces this stress. We cover your furniture and flooring properly, work room by room where possible, and keep the worksite as clean as we can throughout the project, so you are not left dealing with dust and paint splashes for days afterward."
@@ -75,7 +75,7 @@ export const SERVICE_DETAILS_DATA = {
     seoTitle: "Exterior Painting Services in Coimbatore | Weatherproof Paint Solutions",
     metaDesc: "Protect your home or building from sun, rain and dust with expert exterior painting in Coimbatore. Shanmugam Associates uses weather-resistant paints that last longer.",
     ctaText: "Reach us for a site visit and exterior painting quote. 94435 22285",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/services/exterior-painting-facade.jpg",
     introParagraphs: [
       "Coimbatore's sun, dust, and monsoon rain are genuinely tough on any building. Unlike interior walls, which are mostly protected from the weather, exterior surfaces face direct sunlight for hours, sudden heavy rain during the monsoon, and constant fine dust that settles into every crack and joint. Exterior paint is not just about how your building looks from the road - it is the outer protective layer that shields your walls, year after year, from all of this. When that layer weakens or fades, the damage does not stop at the surface. It slowly affects the plaster, and eventually the structure underneath.",
       "We help homeowners, businesses, and builders across Coimbatore choose and apply the right exterior paint system so that their building stays strong and continues to look good for many years, instead of needing a fresh coat every year or two."
@@ -149,7 +149,7 @@ export const SERVICE_DETAILS_DATA = {
     seoTitle: "House Painting Services in Coimbatore | New & Repaint Solutions",
     metaDesc: "From new house painting to repainting old homes, Shanmugam Associates offers complete house painting solutions in Coimbatore at fair, transparent prices.",
     ctaText: "Call to book a free home painting inspection. 94435 22285",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/projects/villas-sunrise.jpg",
     introParagraphs: [
       "The first thing anyone notices about a home is how it looks from the outside, and how it feels the moment they step inside. A well-painted house creates that good first impression, whether it is a brand-new house that has never been painted before, or a home you have lived in for many years and are now giving a fresh new look. House painting, done properly, is one of the simplest and most effective ways to transform how a property feels, both to the family living there and to anyone visiting.",
       "Shanmugam Associates offers complete house painting solutions across Coimbatore, handling everything from the very first coat on a newly constructed home to a full repaint of an older property, at fair and transparent prices that our clients can understand and trust."
@@ -217,7 +217,7 @@ export const SERVICE_DETAILS_DATA = {
     seoTitle: "Commercial Painting Contractors in Coimbatore | Offices, Shops & Factories",
     metaDesc: "Give your office, showroom or factory a professional look with Shanmugam Associates' commercial painting services in Coimbatore. Reliable, tidy, on-time work.",
     ctaText: "Contact us to discuss your commercial painting project. 94435 22285",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/projects/hospital-aravind-eye.jpg",
     introParagraphs: [
       "A workplace that looks clean and well-kept says a lot to your customers, your staff, and anyone else who walks through the door. Whether it is a small showroom, a busy office, or a large factory floor, the condition of your walls quietly shapes how people perceive your business, often without them even realising it. Shanmugam Associates handles commercial painting projects of all sizes across Coimbatore, and we work carefully around your business hours so there is minimal disruption to your daily operations.",
       "Unlike residential painting, commercial projects often come with additional considerations - working around staff schedules, protecting equipment and inventory, meeting tighter deadlines, and sometimes coordinating access across multiple floors or departments. Our team has handled enough commercial projects over the years to plan around these challenges properly, rather than treating a business premises the same way as an empty house."
@@ -297,7 +297,7 @@ export const SERVICE_DETAILS_DATA = {
     seoTitle: "Texture Painting Services in Coimbatore | Royal Play & Designer Wall Finishes",
     metaDesc: "Add style to your walls with texture painting in Coimbatore. Royal Play designs, feature walls and designer finishes by Shanmugam Associates.",
     ctaText: "Call to explore texture painting options for your home. 94435 22285",
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/services/decorative-jali-finishing.jpg",
     introParagraphs: [
       "Plain walls are perfectly fine, and many homes and offices are happy with a clean, simple flat colour. But if you want to take your space to the next level, texture painting is one of the most effective ways to do it. It is a great option for making a single feature wall stand out in a living room, or for giving an entire office reception area a more premium, designed feel, without the cost or disruption of a full renovation.",
       "Texture painting has become increasingly popular across Coimbatore homes and businesses in recent years, as more people look for ways to personalise their spaces beyond the standard flat-colour approach that was common in the past. Our team has kept up with these trends while staying rooted in solid technique, because texture finishes, done poorly, can look uneven or dated very quickly."
@@ -370,7 +370,7 @@ export const SERVICE_DETAILS_DATA = {
     seoTitle: "Waterproofing Services in Coimbatore | Terrace, Roof & Wall Solutions",
     metaDesc: "Stop water leakage and damp walls before they damage your building. Shanmugam Associates offers reliable waterproofing services across Coimbatore.",
     ctaText: "Call for a free waterproofing inspection. 94435 22285",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/services/waterproofing-terrace-works.jpg",
     introParagraphs: [
       "Water leakage does not just ruin your paint - over time, it can quietly damage the actual structure of your building. What often starts as a small damp patch on the ceiling can, if left untreated, weaken concrete, corrode the steel reinforcement inside it, and lead to repair costs that are many times higher than what proper waterproofing would have cost in the first place. Our waterproofing services across Coimbatore are designed to stop the problem at its source, before it has the chance to get worse.",
       "Many homeowners only think about waterproofing once they already see a problem, such as a leaking ceiling during heavy rain. While we are always ready to help with these urgent situations, waterproofing is genuinely more effective, and more affordable, when it is done proactively, especially before the monsoon season begins each year."

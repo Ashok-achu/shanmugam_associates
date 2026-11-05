@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage';
+import GalleryPage from './pages/GalleryPage';
 import ProvisionDetailPage from './pages/ProvisionDetailPage';
 import ContactPage from './pages/ContactPage';
 import FAQPage from './pages/FAQPage';
@@ -47,6 +48,7 @@ export default function App() {
       if (clean === '/blog') return { page: 'blog', slug: null };
       if (clean === '/contact') return { page: 'contact', slug: null };
       if (clean === '/projects') return { page: 'projects', slug: null };
+      if (clean === '/gallery') return { page: 'gallery', slug: null };
       if (clean === '/services') return { page: 'services', slug: null };
 
       const provMatch = PROVISION_SLUGS.find(s => clean === `/${s}`);
@@ -77,11 +79,12 @@ export default function App() {
     else if (activePage === 'blog') canonicalPath = '/blog';
     else if (activePage === 'contact') canonicalPath = '/contact';
     else if (activePage === 'projects') canonicalPath = '/projects';
+    else if (activePage === 'gallery') canonicalPath = '/gallery';
     else if (activePage === 'services') canonicalPath = '/services';
     else if (activePage === 'provision') canonicalPath = `/${selectedProvision}`;
 
     // Update browser URL without reload if different
-    if (window.location.pathname !== canonicalPath && canonicalPath !== '/projects' && canonicalPath !== '/services') {
+    if (window.location.pathname !== canonicalPath && canonicalPath !== '/projects' && canonicalPath !== '/services' && canonicalPath !== '/gallery') {
       window.history.pushState({}, '', canonicalPath);
     }
 
@@ -212,6 +215,10 @@ export default function App() {
 
         {activePage === 'projects' && (
           <ProjectsPage onNavigatePage={navigateToPage} />
+        )}
+
+        {activePage === 'gallery' && (
+          <GalleryPage onNavigatePage={navigateToPage} />
         )}
 
         {activePage === 'login' && (

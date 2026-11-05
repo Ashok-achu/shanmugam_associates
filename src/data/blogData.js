@@ -75,7 +75,7 @@ export const BLOG_ARTICLES = [
     category: "Painting Tips & Ideas",
     categorySlug: "painting-tips",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=900&auto=format&fit=crop",
+    image: "/images/services/exterior-painting-facade.jpg",
     date: "March 2026",
     content: [
       "Choosing wall colors for a home in Coimbatore is about balancing natural daylight, room dimensions, and thermal comfort. Coimbatore's bright sunlight means ultra-reflective whites can sometimes feel blinding, while overly heavy dark shades can make non-air-conditioned rooms feel warm.",
@@ -98,7 +98,7 @@ export const BLOG_ARTICLES = [
     category: "Waterproofing Solutions",
     categorySlug: "waterproofing-solutions",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=900&auto=format&fit=crop",
+    image: "/images/services/waterproofing-terrace-works.jpg",
     date: "February 2026",
     content: [
       "When the southwest and northeast monsoons arrive in Coimbatore, rainfall can be relentless. Many property owners only react when they see a wet patch on the ceiling or peeling paint along the skirting board. By that point, water has already penetrated the concrete slab.",
@@ -121,7 +121,7 @@ export const BLOG_ARTICLES = [
     category: "Construction Insights",
     categorySlug: "construction-insights",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop",
+    image: "/images/projects/villas-sunrise.jpg",
     date: "January 2026",
     content: [
       "Building a custom villa in Coimbatore—whether in Vadavalli, Saravanampatti, Kovaipudur, or Pollachi Road—is a major milestone for any family. Success starts with solid planning before a single cubic meter of soil is excavated.",
@@ -145,7 +145,7 @@ export const BLOG_ARTICLES = [
     category: "Painting Tips & Ideas",
     categorySlug: "painting-tips",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=900&auto=format&fit=crop",
+    image: "/images/projects/apartments-block-h.jpg",
     date: "January 2026",
     content: [
       "While both jobs use rollers and brushes, interior and exterior painting are completely different engineering challenges.",
@@ -168,7 +168,7 @@ export const BLOG_ARTICLES = [
     category: "Home Renovation & Remodeling",
     categorySlug: "home-renovation",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=900&auto=format&fit=crop",
+    image: "/images/projects/apartments-aerial-park.jpg",
     date: "December 2025",
     content: [
       "Real estate appraisers and prospective tenants judge a property within the first 30 seconds of arrival. Faded exterior facades, water stains along parapets, or dingy yellowed interior walls immediately trigger subconscious thoughts of neglect.",
@@ -191,7 +191,7 @@ export const BLOG_ARTICLES = [
     category: "Construction Insights",
     categorySlug: "construction-insights",
     readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=900&auto=format&fit=crop",
+    image: "/images/projects/hospital-aravind-eye.jpg",
     date: "November 2025",
     content: [
       "Budgeting for a new house is one of the most stressful parts of the process because contractors frequently quote low upfront and inflate prices midway with 'extra work' clauses.",
@@ -214,7 +214,7 @@ export const BLOG_ARTICLES = [
     category: "Waterproofing Solutions",
     categorySlug: "waterproofing-solutions",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=900&auto=format&fit=crop",
+    image: "/images/services/civil-structural-finishing.jpg",
     date: "October 2025",
     content: [
       "Ignoring small moisture signals is how minor terrace repairs turn into major structural emergencies. Here are the 7 telltale signs that call for an immediate inspection:",
@@ -242,7 +242,7 @@ export const BLOG_ARTICLES = [
     category: "Painting Tips & Ideas",
     categorySlug: "painting-tips",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=900&auto=format&fit=crop",
+    image: "/images/services/decorative-jali-finishing.jpg",
     date: "September 2025",
     content: [
       "Modern homeowners are moving away from monolithic plain painted rooms. A single textured wall acts as an architectural focal point, adding tactile richness without requiring heavy wood paneling or expensive wallpaper.",
@@ -265,7 +265,7 @@ export const BLOG_ARTICLES = [
     category: "Construction Insights",
     categorySlug: "construction-insights",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=900&auto=format&fit=crop",
+    image: "/images/projects/gated-community-entrance.jpg",
     date: "August 2025",
     content: [
       "Building a home without a structured checklist leads to budget overrun and emotional exhaustion. Here is our master checklist refined over 48 years of construction in Tamil Nadu:",
@@ -291,7 +291,7 @@ export const BLOG_ARTICLES = [
     category: "Painting Tips & Ideas",
     categorySlug: "painting-tips",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=900&auto=format&fit=crop",
+    image: "/images/services/waterproofing-terrace-works.jpg",
     date: "July 2025",
     content: [
       "The painting contractor market has many fly-by-night operators who submit rock-bottom bids, demand heavy advances, and then rush through or abandon the job midway. Choosing the right team makes the difference between an effortless experience and months of stress.",

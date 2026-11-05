@@ -77,7 +77,7 @@ export default function AboutSection({ onReadMore }) {
               boxShadow: '0 20px 45px rgba(0,0,0,0.12)'
             }}>
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1100&auto=format&fit=crop"
+                src="/images/about/about-villas-sunrise.jpg"
                 alt="Shanmugam Associates Luxury Construction"
                 className="about-main-img"
                 style={{

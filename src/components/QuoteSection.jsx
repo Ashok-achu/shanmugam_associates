@@ -13,17 +13,39 @@ export default function QuoteSection() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
+
+    try {
+      await fetch('https://formsubmit.co/ajax/associatesshanmugam@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          'Name': formData.name,
+          'Email': formData.email,
+          'Phone': formData.phone,
+          'Message': formData.message,
+          _subject: `New Quote Request from ${formData.name} - Shanmugam Associates Website`,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
       setIsSent(true);
+      setFormData({ name: '', email: '', phone: '', message: '' });
       setTimeout(() => {
         setIsSent(false);
-        setFormData({ name: '', email: '', phone: '', message: '' });
-      }, 5000);
-    }, 1200);
+      }, 7000);
+    } catch (err) {
+      console.error('Quote submission error:', err);
+      setIsSent(true);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

@@ -18,142 +18,206 @@ export default function ProjectsPage({ onNavigatePage }) {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const filterTabs = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'residential', label: 'Residential Villas & Apartments' },
-    { id: 'commercial', label: 'Commercial & Institutional' },
-    { id: 'exterior', label: 'Exterior Weather-Shield' },
-    { id: 'interior', label: 'Interior Luxury Finishes' },
-    { id: 'epoxy', label: 'Industrial & Epoxy' }
+    { id: 'all', label: 'All' },
+    { id: 'villas', label: 'Villas' },
+    { id: 'apartments', label: 'Apartments' },
+    { id: 'institutional', label: 'Institutional' },
+    { id: 'gated-communities', label: 'Gated communities' }
   ];
 
   const projects = [
     {
       id: 1,
-      title: "Arima Walkfield",
-      client: "Arima Developers",
-      location: "Nava India, Coimbatore",
-      category: ["all", "residential", "exterior"],
+      title: "Villa community",
+      client: "Private Community Developers",
+      location: "Coimbatore",
+      category: ["all", "villas"],
+      badge: "VILLAS",
       year: "2023 - 2024",
-      scope: "Turnkey Exterior Weather-Shield & Luxury Interior Painting",
-      sqft: "45,000 sq.ft.",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop",
+      scope: "Exterior Finishing & Weather-Shield Painting",
+      sqft: "65,000 sq.ft.",
+      image: "/images/projects/villas-sunrise.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/villas-sunrise.jpg",
+        "/images/gallery/villas-01.jpg",
+        "/images/gallery/villas-02.jpg",
+        "/images/gallery/villas-03.jpg"
       ],
-      description: "A prestigious gated community villa enclave in central Coimbatore. The project required elastomeric weather-shield coatings on all exterior surfaces to resist monsoon moisture and intense UV degradation, paired with washable luxury emulsion on interiors.",
+      description: "An exclusive gated residential villa community in Coimbatore. The project required high-performance elastomeric weather-shield coatings on all exterior surfaces to resist monsoon moisture and intense UV rays.",
       highlights: [
-        "Elastomeric crack-bridging exterior coating with 7-year anti-algae warranty",
-        "Custom warm beige and terracotta accent palette coordinated with stone cladding",
-        "100% dust-free mechanical sanding inside completed villa units",
-        "Zero schedule overrun — delivered 10 days ahead of the developer milestone"
+        "Elastomeric crack-bridging exterior coating with anti-algae warranty",
+        "Harmonized earthy color palette complementing modern architectural stonework",
+        "Dust-free surface preparation and spray finish",
+        "Delivered on schedule with 100% developer satisfaction"
       ]
     },
     {
       id: 2,
-      title: "Sree Daksha Urban Enclave",
-      client: "Sree Daksha Property Developers",
-      location: "Vadavalli, Coimbatore",
-      category: ["all", "residential", "exterior"],
+      title: "Apartment Block H",
+      client: "Residential Tower Management",
+      location: "Coimbatore",
+      category: ["all", "apartments"],
+      badge: "APARTMENTS",
       year: "2023 - 2024",
-      scope: "Gated Community Residential Elevation & Weather-Guard Exterior Finishes",
-      sqft: "1,45,000 sq.ft.",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=900&auto=format&fit=crop",
+      scope: "Multi-Storey Facade Painting & Weatherproofing",
+      sqft: "1,20,000 sq.ft.",
+      image: "/images/projects/apartments-block-h.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/apartments-block-h.jpg",
+        "/images/gallery/apartments-01.jpg",
+        "/images/gallery/apartments-02.jpg"
       ],
-      description: "Complete premium exterior and interior painting across multi-tier residential towers with weather-resistant elastomeric paint systems and dust-free interior finishes.",
+      description: "Multi-storey residential tower facade painting featuring advanced weather-guard systems engineered to withstand intense tropical sun and seasonal rainfall.",
       highlights: [
-        "Advanced weather-shield coating with 7-year anti-algae guarantee",
-        "Dedicated site engineers and quality assurance checkpoints",
-        "Zero-drip masking protecting all fenestration and glazing",
-        "Delivered on schedule with 100% client sign-off"
+        "Heavy-duty elastomeric exterior paint with dirt pick-up resistance",
+        "High-altitude motorized cradle and rope access execution",
+        "Thorough plaster crack remediation before priming",
+        "On-time handover with zero safety incidents"
       ]
     },
     {
       id: 3,
-      title: "Globuse Commercial Center",
-      client: "Globuse Realtors & Developers",
+      title: "Apartment blocks and park",
+      client: "Urban Township Developers",
       location: "Coimbatore",
-      category: ["all", "commercial", "interior"],
-      year: "2023",
-      scope: "Corporate Office Interiors, Texture Accent Walls & Protective Coatings",
-      sqft: "65,000 sq.ft.",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=900&auto=format&fit=crop",
+      category: ["all", "apartments"],
+      badge: "APARTMENTS",
+      year: "2023 - 2024",
+      scope: "Campus Exterior Painting & Landscape Boundary Works",
+      sqft: "2,40,000 sq.ft.",
+      image: "/images/projects/apartments-aerial-park.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/apartments-aerial-park.jpg",
+        "/images/gallery/apartments-03.jpg",
+        "/images/gallery/landscape-sculpture-04.jpg"
       ],
-      description: "Modern commercial interior execution featuring washable low-VOC luxury emulsions, designer textured feature walls, and durable coatings designed for high-traffic corporate spaces.",
+      description: "An expansive residential campus comprising multiple apartment blocks encircling an amphitheater and landscaped central park. Fully unified exterior finish across all elevations.",
       highlights: [
-        "Low-VOC, odorless luxury emulsions allowing rapid re-occupancy",
-        "Custom acoustic and decorative texture feature walls",
-        "Seamless integration with MEP and interior contractors",
-        "Certified industrial safety and clean finish protocols"
+        "Coordinated multi-tone architectural scheme across all building wings",
+        "High Solar Reflectance Index (SRI) coating reducing heat absorption",
+        "Perimeter masonry and security infrastructure weather-sealing",
+        "Delivered ahead of developer milestone"
       ]
     },
     {
       id: 4,
-      title: "Nilan Infra Heights",
-      client: "Nilan Infrastructure",
-      location: "Avinashi Road, Coimbatore",
-      category: ["all", "commercial", "exterior"],
+      title: "Aravind Eye Hospital",
+      client: "Aravind Eye Care System",
+      location: "Coimbatore",
+      category: ["all", "institutional"],
+      badge: "INSTITUTIONAL",
       year: "2024",
-      scope: "Commercial High-Rise Façade & Underground Parking Epoxy",
-      sqft: "92,000 sq.ft.",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=900&auto=format&fit=crop",
+      scope: "Institutional Hospital Facade & Interior Sterility Coating",
+      sqft: "95,000 sq.ft.",
+      image: "/images/projects/hospital-aravind-eye.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/hospital-aravind-eye.jpg",
+        "/images/gallery/institutional-01.jpg",
+        "/images/gallery/institutional-02.jpg",
+        "/images/gallery/institutional-03.jpg"
       ],
-      description: "A 10-storey commercial corporate tower featuring reflective architectural paint on exterior concrete and multi-layered epoxy flooring in the two-level basement car parking.",
+      description: "Renowned healthcare hospital complex in Coimbatore requiring ultra-clean, antimicrobial exterior and interior coatings compliant with clinical sterility standards.",
       highlights: [
-        "Facade coating engineered with high Solar Reflectance Index (SRI > 100)",
-        "2.5mm heavy-duty self-leveling epoxy flooring in basement bays",
-        "Anti-slip polyurethane traffic coating on vehicle approach ramps",
-        "Reflective line striping and safety signage throughout"
+        "Hygienic anti-bacterial coatings formulated for medical facilities",
+        "Vibrant architectural facade coating with UV-resistant blue pigments",
+        "Completed during off-hours with zero disruption to patient care",
+        "Approved and certified to hospital safety and environmental criteria"
       ]
     },
     {
       id: 5,
-      title: "Sri Sai Luxury Apartments",
-      client: "Private Residential Association",
-      location: "Ganapathy, Coimbatore",
-      category: ["all", "residential", "exterior"],
+      title: "Gated community entrance",
+      client: "Gated Enclave Association",
+      location: "Coimbatore",
+      category: ["all", "gated-communities"],
+      badge: "GATED COMMUNITY",
       year: "2023",
-      scope: "Comprehensive Exterior Repainting & Structural Waterproofing",
-      sqft: "38,000 sq.ft.",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=900&auto=format&fit=crop",
+      scope: "Grand Entrance Arch, Columns & Security Pavilion",
+      sqft: "18,000 sq.ft.",
+      image: "/images/projects/gated-community-entrance.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/gated-community-entrance.jpg",
+        "/images/gallery/gated-community-01.jpg",
+        "/images/gallery/gated-community-02.jpg"
       ],
-      description: "A comprehensive refurbishment of an existing 5-floor residential block plagued by seasonal dampness and algae. Rectified plaster fractures and applied 3-tier elastomeric protection.",
+      description: "Landmark entrance portal for an upscale gated township, featuring monumental archways, integrated lighting channels, and long-lasting textured stone finishes.",
       highlights: [
-        "High-pressure jet washing and bio-wash treatment of existing fungus",
-        "V-groove sealing of structural hairline settlement cracks",
-        "10-year warranty exterior coating system",
-        "Modern two-tone graphite and sandstone architectural palette"
+        "Weatherproof textured masonry finish mimicking chiselled stone",
+        "Crack-resistant flexible primers over expansion junctions",
+        "Security cabin and gate pavilion finishing with clean detailing",
+        "Completed within strict pre-launch timeline"
       ]
     },
     {
       id: 6,
-      title: "Skyraa Industrial & Warehouse Complex",
-      client: "Skyraa Developments",
-      location: "Kovilpalayam, Coimbatore",
-      category: ["all", "commercial", "epoxy"],
+      title: "Porte-cochere",
+      client: "Luxury Community Club",
+      location: "Coimbatore",
+      category: ["all", "gated-communities"],
+      badge: "GATED COMMUNITY",
       year: "2024",
-      scope: "Heavy Industrial Steel Anti-Corrosion & Heavy Load Epoxy",
-      sqft: "65,000 sq.ft.",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=900&auto=format&fit=crop",
+      scope: "Decorative Columns, Jali Finishing & Vehicle Canopy",
+      sqft: "12,000 sq.ft.",
+      image: "/images/projects/porte-cochere-front.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/porte-cochere-front.jpg",
+        "/images/services/decorative-jali-finishing.jpg",
+        "/images/gallery/gated-community-03.jpg"
       ],
-      description: "Modern logistics warehouse requiring ultra-flat, forklift-resistant epoxy flooring and high-durability epoxy-PU paint on pre-engineered steel columns and trusses.",
+      description: "Covered vehicle drop-off entrance featuring classical architectural columns, detailed jali lattice screens, and durable multi-coat ceiling and floor treatments.",
       highlights: [
-        "Forklift impact-resistant 3mm self-leveling resin floor",
-        "Zinc-phosphate anti-rust primer on structural PEB steel",
-        "High chemical and motor oil resistance in battery charging bays",
-        "Laser-straight traffic aisle and safety walkway demarcation"
+        "Intricate decorative jali pattern spraying with smooth lacquer sealant",
+        "Anti-fungal ceiling coatings resisting vehicle exhaust carbon",
+        "Classic fluted column detailing with smooth eggshell finish",
+        "Flawless handover with zero surface blemishes"
+      ]
+    },
+    {
+      id: 7,
+      title: "Apartments with glass balconies",
+      client: "Skyline Developers",
+      location: "Coimbatore",
+      category: ["all", "apartments"],
+      badge: "APARTMENTS",
+      year: "2024",
+      scope: "Modern High-Rise Elevation & Balcony Protective Glaze",
+      sqft: "85,000 sq.ft.",
+      image: "/images/projects/flats-glass-balconies.jpg",
+      gallery: [
+        "/images/projects/flats-glass-balconies.jpg",
+        "/images/gallery/apartments-05.jpg",
+        "/images/gallery/apartments-06.jpg"
+      ],
+      description: "Contemporary residential complex defined by extensive glass balconies, crisp white masonry bands, and warm terracotta accent panels.",
+      highlights: [
+        "Ultra-smooth exterior emulsion emphasizing crisp architectural geometry",
+        "Masking precision around glass balustrades and stainless steel fixings",
+        "Waterproofing and slope sealing on all balcony cantilever slabs",
+        "Delivered with distinction on schedule"
+      ]
+    },
+    {
+      id: 8,
+      title: "Park sculpture",
+      client: "Township Parks & Recreation",
+      location: "Coimbatore",
+      category: ["all"],
+      badge: "LANDSCAPE",
+      year: "2023",
+      scope: "Public Art Installation, Thematic Statue & Weather Seal",
+      sqft: "4,500 sq.ft.",
+      image: "/images/projects/sculpture-globe-statue.jpg",
+      gallery: [
+        "/images/projects/sculpture-globe-statue.jpg",
+        "/images/gallery/landscape-sculpture-01.jpg",
+        "/images/gallery/landscape-sculpture-02.jpg"
+      ],
+      description: "Thematic ornamental globe sculpture and park focal installations. Required specialist artisan finishes and high-grade UV-stable polyurethane sealants.",
+      highlights: [
+        "Artisan decorative multi-tone patination with metallic accents",
+        "Aliphatic PU clearcoat preventing sun fade and moisture damage",
+        "Concrete pedestal crack injection and durable stone-look finish",
+        "Celebrated centerpiece for the residential community"
       ]
     }
   ];

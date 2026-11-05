@@ -218,7 +218,7 @@ export default function CTASection() {
             }}
           />
           <img
-            src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1400&auto=format&fit=crop"
+            src="/images/hero/contact-banner-gated-entrance.jpg"
             alt="Luxury villa by Shanmugam Associates"
             style={{
               width: '100%',

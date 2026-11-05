@@ -6,12 +6,16 @@ import {
   Send, 
   CheckCircle2, 
   Sparkles, 
-  MessageCircle 
+  MessageCircle,
+  Loader2,
+  AlertCircle
 } from 'lucide-react';
 import { COMPANY_INFO, AREAS_SERVED } from '../data/siteData';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -21,10 +25,53 @@ export default function ContactPage() {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 6000);
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/associatesshanmugam@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          'Customer Name': formData.name,
+          'Phone Number': formData.phone,
+          'Email Address': formData.email || 'Not provided',
+          'Service Required': formData.service,
+          'Property Location': formData.location || 'Not provided',
+          'Requirements & Details': formData.message || 'Not provided',
+          _subject: `New Website Enquiry: ${formData.name} (${formData.service})`,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const result = await response.json();
+      if (response.ok || result.success === 'true' || result.success === true) {
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          service: 'Interior Painting',
+          location: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.message || 'Form submission failed');
+      }
+    } catch (err) {
+      console.error('Contact form submission error:', err);
+      setErrorMessage(
+        'Unable to send automatically at this moment. Please use the WhatsApp button below or call 94435 22285 directly.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleWhatsApp = () => {
@@ -41,7 +88,9 @@ export default function ContactPage() {
           HERO BANNER
       ══════════════════════════════════════════════════════════ */}
       <section className="page-hero-section" style={{
-        background: 'linear-gradient(135deg, #090e17 0%, #111827 60%, #1e293b 100%)',
+        background: 'linear-gradient(rgba(9, 14, 23, 0.84), rgba(17, 24, 39, 0.9)), url(/images/hero/contact-banner-gated-entrance.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         color: '#ffffff',
         padding: '5.5rem 1.5rem 4.5rem',
         borderBottom: '1px solid rgba(255,255,255,0.08)',
@@ -291,17 +340,33 @@ export default function ContactPage() {
                 background: '#ecfdf5',
                 border: '1px solid #6ee7b7',
                 borderRadius: '16px',
-                padding: '2rem',
+                padding: '2.5rem 2rem',
                 textAlign: 'center',
                 color: '#065f46'
               }}>
-                <CheckCircle2 size={42} color="#059669" style={{ margin: '0 auto 1rem' }} />
-                <h4 style={{ fontSize: '1.2rem', fontWeight: '800', marginBottom: '0.5rem' }}>
-                  Thank You for Reaching Out!
+                <CheckCircle2 size={48} color="#059669" style={{ margin: '0 auto 1rem' }} />
+                <h4 style={{ fontSize: '1.3rem', fontWeight: '800', marginBottom: '0.65rem', color: '#065f46' }}>
+                  Enquiry Sent Successfully!
                 </h4>
-                <p style={{ margin: 0, fontSize: '0.94rem', lineHeight: 1.6 }}>
-                  Our team will call you back shortly to understand the requirement and schedule your free site visit.
+                <p style={{ margin: '0 0 1rem 0', fontSize: '0.96rem', lineHeight: 1.65, color: '#047857' }}>
+                  Your details have been forwarded to <strong>associatesshanmugam@gmail.com</strong>. Our team will review your site requirements and call you shortly to schedule your free inspection.
                 </p>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  style={{
+                    background: '#059669',
+                    color: '#ffffff',
+                    border: 'none',
+                    padding: '0.65rem 1.45rem',
+                    borderRadius: '8px',
+                    fontSize: '0.9rem',
+                    fontWeight: '700',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Send Another Enquiry
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -449,11 +514,30 @@ export default function ContactPage() {
                 </div>
 
                 <div className="cta-button-row" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                  {errorMessage && (
+                    <div style={{
+                      width: '100%',
+                      background: '#fef2f2',
+                      border: '1px solid #fecaca',
+                      borderRadius: '10px',
+                      padding: '0.85rem 1rem',
+                      color: '#b91c1c',
+                      fontSize: '0.9rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem'
+                    }}>
+                      <AlertCircle size={18} style={{ flexShrink: 0 }} />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     style={{
                       flex: 1,
-                      background: '#b87816',
+                      background: isSubmitting ? '#94a3b8' : '#b87816',
                       color: '#ffffff',
                       border: 'none',
                       padding: '0.95rem 1.75rem',
@@ -464,15 +548,28 @@ export default function ContactPage() {
                       alignItems: 'center',
                       justifyContent: 'center',
                       gap: '0.5rem',
-                      cursor: 'pointer',
+                      cursor: isSubmitting ? 'not-allowed' : 'pointer',
                       boxShadow: '0 4px 15px rgba(184,120,22,0.3)',
                       transition: 'all 0.2s'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.background = '#9e640e'}
-                    onMouseLeave={(e) => e.currentTarget.style.background = '#b87816'}
+                    onMouseEnter={(e) => {
+                      if (!isSubmitting) e.currentTarget.style.background = '#9e640e';
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isSubmitting) e.currentTarget.style.background = '#b87816';
+                    }}
                   >
-                    <Send size={16} />
-                    <span>Request Free Quotation</span>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 size={18} className="animate-spin" />
+                        <span>Sending Enquiry...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send size={16} />
+                        <span>Request Free Quotation</span>
+                      </>
+                    )}
                   </button>
 
                   <button

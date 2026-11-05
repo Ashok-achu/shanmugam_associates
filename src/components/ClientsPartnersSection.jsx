@@ -5,11 +5,11 @@ export default function ClientsPartnersSection() {
 
   // 7 Client sectors
   const clientCategories = [
-    { id: 1, name: "KCP Infra", fullName: "KCP Infra Limited", category: "Infrastructure & Smart City", icon: Building2, color: "#0284c7" },
-    { id: 2, name: "Sree Daksha", fullName: "Sree Daksha Property Developers", category: "Property Developers", icon: Building2, color: "#059669" },
-    { id: 3, name: "Arima Enclaves", fullName: "Arima Construction & Developers", category: "Residential & Commercial", icon: Home, color: "#2563eb" },
-    { id: 4, name: "Nilan Infra", fullName: "Nilan Infrastructure & Builders", category: "Real Estate / Infrastructure", icon: Building2, color: "#b87816" },
-    { id: 5, name: "Skyraa Infra", fullName: "Skyraa Infra & Developments", category: "Real Estate / Development", icon: Building2, color: "#0284c7" },
+    { id: 1, name: "KCP Infra", fullName: "KCP Infra Limited", category: "Infrastructure & Smart City", icon: Building2, color: "#0284c7", logo: "/images/logos/KCP_.png" },
+    { id: 2, name: "Sree Daksha", fullName: "Sree Daksha Property Developers", category: "Property Developers", icon: Building2, color: "#059669", logo: "/images/logos/daksha1.png" },
+    { id: 3, name: "Arima Enclaves", fullName: "Arima Construction & Developers", category: "Residential & Commercial", icon: Home, color: "#2563eb", logo: "/images/logos/arima.png" },
+    { id: 4, name: "Annapoorna", fullName: "Annapoorna Group", category: "Hospitality / Commercial", icon: Building2, color: "#b87816", logo: "/images/logos/annapoorna.jpeg" },
+    { id: 5, name: "Arthy", fullName: "Arthy Constructions", category: "Real Estate / Development", icon: Building2, color: "#0284c7", logo: "/images/logos/Arthy.png" },
     { id: 6, name: "Andavar Traders", fullName: "Andavar Traders & Enterprises", category: "Manufacturing / Trading", icon: Factory, color: "#16a34a" },
     { id: 7, name: "Private Clients", fullName: "Private Residential Clients", category: "Residential Projects", icon: Home, color: "#b87816" }
   ];
@@ -155,15 +155,26 @@ export default function ClientsPartnersSection() {
                       e.currentTarget.closest('.marquee-track').style.animationPlayState = 'running';
                     }}
                   >
-                    {/* Icon Badge */}
-                    <div style={{
-                      width: '40px', height: '40px', borderRadius: '10px',
-                      background: '#fdf6ec', border: '1px solid #f6dfbe',
-                      color: '#b87816', display: 'flex', alignItems: 'center',
-                      justifyContent: 'center', flexShrink: 0
-                    }}>
-                      <IconComponent size={20} />
-                    </div>
+                    {/* Logo or Icon Badge */}
+                    {client.logo ? (
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        style={{
+                          width: '50px', height: '50px', borderRadius: '10px',
+                          objectFit: 'contain', flexShrink: 0
+                        }}
+                      />
+                    ) : (
+                      <div style={{
+                        width: '40px', height: '40px', borderRadius: '10px',
+                        background: '#fdf6ec', border: '1px solid #f6dfbe',
+                        color: '#b87816', display: 'flex', alignItems: 'center',
+                        justifyContent: 'center', flexShrink: 0
+                      }}>
+                        <IconComponent size={20} />
+                      </div>
+                    )}
 
                     <span style={{
                       fontSize: '0.82rem', fontWeight: '700', color: '#1f2937',

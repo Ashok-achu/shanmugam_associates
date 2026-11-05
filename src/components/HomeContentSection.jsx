@@ -88,8 +88,89 @@ export default function HomeContentSection({ onNavigatePage, onSelectProvision }
           </div>
 
           {/* ──────────────────────────────────────────────────────────
-              PART 1: PROFESSIONAL PAINTING SERVICES
+              SERVICES VISUAL STRIP (4 Featured Pillars)
           ────────────────────────────────────────────────────────── */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: '1.5rem',
+            marginBottom: '4.5rem'
+          }}>
+            {[
+              {
+                title: 'Exterior painting',
+                image: '/images/services/exterior-painting-facade.jpg',
+                slug: 'exterior-painting'
+              },
+              {
+                title: 'Waterproofing',
+                image: '/images/services/waterproofing-terrace-works.jpg',
+                slug: 'waterproofing'
+              },
+              {
+                title: 'Decorative finishes',
+                image: '/images/services/decorative-jali-finishing.jpg',
+                slug: 'texture-painting'
+              },
+              {
+                title: 'Civil works',
+                image: '/images/services/civil-structural-finishing.jpg',
+                slug: null
+              }
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                onClick={() => handleServiceClick(item.slug)}
+                style={{
+                  background: '#ffffff',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  border: '1px solid #e2e8f0',
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.04)',
+                  cursor: 'pointer',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 12px 28px rgba(184,120,22,0.15)';
+                  const img = e.currentTarget.querySelector('img');
+                  if (img) img.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.04)';
+                  const img = e.currentTarget.querySelector('img');
+                  if (img) img.style.transform = 'scale(1)';
+                }}
+              >
+                <div style={{ height: '190px', overflow: 'hidden' }}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                      transition: 'transform 0.5s ease'
+                    }}
+                  />
+                </div>
+                <div style={{ padding: '1.25rem 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '800', color: '#111827', margin: 0 }}>
+                    {item.title}
+                  </h3>
+                  <div style={{
+                    width: '32px', height: '32px', borderRadius: '50%',
+                    background: 'rgba(184,120,22,0.1)', color: '#b87816',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                  }}>
+                    <ArrowRight size={16} />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
           <div style={{ marginBottom: '5rem' }}>
             {/* Painting Header Card with Verbatim Intro */}
             <div style={{

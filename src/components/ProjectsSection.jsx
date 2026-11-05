@@ -19,161 +19,196 @@ export default function ProjectsSection({ onNavigatePage }) {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const filterTabs = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'residential', label: 'Residential' },
-    { id: 'commercial', label: 'Commercial' },
-    { id: 'industrial', label: 'Industrial' },
-    { id: 'interior', label: 'Interior Painting' },
-    { id: 'exterior', label: 'Exterior Painting' },
-    { id: 'texture', label: 'Texture & Decorative' },
-    { id: 'epoxy', label: 'Epoxy Flooring' }
+    { id: 'all', label: 'All' },
+    { id: 'villas', label: 'Villas' },
+    { id: 'apartments', label: 'Apartments' },
+    { id: 'institutional', label: 'Institutional' },
+    { id: 'gated-communities', label: 'Gated communities' }
   ];
 
   const allProjects = [
     {
       id: 1,
-      title: "Arima Walkfield",
-      location: "Nava India, Coimbatore",
-      description: "Premium residential villa project with elegant interior and exterior painting finishes.",
+      title: "Villa community",
+      location: "Coimbatore",
+      description: "Exterior finishing and painting for premier residential villa community.",
       status: "Completed",
       photosCount: 12,
-      tags: ["Residential", "Exterior Painting"],
-      categories: ["all", "residential", "exterior"],
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop",
+      tags: ["Villas", "Exterior Finishing"],
+      categories: ["all", "villas"],
+      badge: "VILLAS",
+      image: "/images/projects/villas-sunrise.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/villas-sunrise.jpg",
+        "/images/gallery/villas-01.jpg",
+        "/images/gallery/villas-02.jpg"
       ],
       details: {
-        client: "Arima Walkfield Developers",
-        scope: "Turnkey Exterior Weather-Shield & Luxury Interior Painting",
+        client: "Private Community Developers",
+        scope: "Turnkey Exterior Weather-Shield & Luxury Finishing",
         completion: "Completed on Schedule",
-        highlights: "Weather-resistant elastomeric paint with 7-year warranty and UV protection."
+        highlights: "Weather-resistant elastomeric paint with UV protection and moisture barrier."
       }
     },
-    
     {
-      id: 3,
-      title: "Business Center",
-      location: "Avinashi Road, Coimbatore",
-      description: "Commercial complex with advanced exterior painting and interior finishing solutions.",
-      status: "Ongoing",
-      photosCount: 8,
-      tags: ["Commercial", "Exterior Painting", "Interior Painting"],
-      categories: ["all", "commercial", "exterior", "interior"],
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=900&auto=format&fit=crop",
+      id: 2,
+      title: "Apartment blocks",
+      location: "Coimbatore",
+      description: "Multi-storey facade painting with high-durability weather-shield coatings.",
+      status: "Completed",
+      photosCount: 14,
+      tags: ["Apartments", "Facade Painting"],
+      categories: ["all", "apartments"],
+      badge: "APARTMENTS",
+      image: "/images/projects/apartments-block-h.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/apartments-block-h.jpg",
+        "/images/gallery/apartments-01.jpg",
+        "/images/gallery/apartments-02.jpg"
       ],
       details: {
-        client: "Apex Commercial Ventures",
-        scope: "High-Rise Façade Treatment & Corporate Executive Suite Finishing",
-        completion: "Phase 2 in Progress (85% Completed)",
-        highlights: "Industrial spray painting, fire-retardant interior coatings, and modern exterior glass trims."
+        client: "Residential Tower Management",
+        scope: "Multi-Storey Facade Painting & Weatherproofing",
+        completion: "Delivered on Time",
+        highlights: "High-reach boom and cradle execution with anti-algae elastomeric paint."
+      }
+    },
+    {
+      id: 3,
+      title: "Hospital building",
+      location: "Coimbatore",
+      description: "Large institutional facade and exterior finishing for healthcare landmark (Aravind Eye Hospital).",
+      status: "Completed",
+      photosCount: 10,
+      tags: ["Institutional", "Hospital"],
+      categories: ["all", "institutional"],
+      badge: "INSTITUTIONAL",
+      image: "/images/projects/hospital-aravind-eye.jpg",
+      gallery: [
+        "/images/projects/hospital-aravind-eye.jpg",
+        "/images/gallery/institutional-01.jpg",
+        "/images/gallery/institutional-02.jpg"
+      ],
+      details: {
+        client: "Aravind Eye Care System",
+        scope: "Institutional Hospital Facade & Interior Sterility Coating",
+        completion: "Delivered Flawlessly",
+        highlights: "Specialized low-VOC hygienic coatings with weather-resistant exterior finish."
       }
     },
     {
       id: 4,
-      title: "Modern Villa Interiors",
-      location: "Saravanampatti, Coimbatore",
-      description: "Luxury villa with texture painting and premium interior finishes.",
+      title: "Apartment blocks and park",
+      location: "Coimbatore",
+      description: "Integrated residential apartment towers surrounding central landscaped park.",
       status: "Completed",
-      photosCount: 15,
-      tags: ["Residential", "Texture Painting", "Interior Painting"],
-      categories: ["all", "residential", "texture", "interior"],
-      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=900&auto=format&fit=crop",
+      photosCount: 16,
+      tags: ["Apartments", "Landscape"],
+      categories: ["all", "apartments"],
+      badge: "APARTMENTS",
+      image: "/images/projects/apartments-aerial-park.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/apartments-aerial-park.jpg",
+        "/images/gallery/apartments-03.jpg",
+        "/images/gallery/landscape-sculpture-04.jpg"
       ],
       details: {
-        client: "Private Homeowner",
-        scope: "Designer Textured Accent Walls, Metallic Stucco & PU Wood Coating",
-        completion: "Delivered Flawlessly",
-        highlights: "Custom Italian concrete wall textures and dust-free motorized finish."
+        client: "Urban Township Developers",
+        scope: "Full Campus Exterior Finishing & Boundary Infrastructure",
+        completion: "Completed on Schedule",
+        highlights: "Unified color scheme across multiple towers and landscape pathways."
       }
     },
     {
       id: 5,
-      title: "KCP Industrial Hub",
-      location: "Neelambur, Coimbatore",
-      description: "Heavy-duty industrial warehouse with chemical-resistant epoxy flooring and protective wall coatings.",
+      title: "Gated community entrance",
+      location: "Coimbatore",
+      description: "Grand gated entrance portal, security pavilions, and access boulevards.",
       status: "Completed",
-      photosCount: 14,
-      tags: ["Industrial", "Epoxy Flooring"],
-      categories: ["all", "industrial", "epoxy"],
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=900&auto=format&fit=crop",
+      photosCount: 8,
+      tags: ["Gated communities", "Entrance Arch"],
+      categories: ["all", "gated-communities"],
+      badge: "GATED COMMUNITY",
+      image: "/images/projects/gated-community-entrance.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=900&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/gated-community-entrance.jpg",
+        "/images/gallery/gated-community-01.jpg",
+        "/images/gallery/gated-community-02.jpg"
       ],
       details: {
-        client: "KCP Infrastructure Logistics",
-        scope: "High-Gloss 3mm Self-Leveling Epoxy Flooring System",
-        completion: "Completed on Schedule",
-        highlights: "Forklift-resistant epoxy with anti-slip texture and line marking."
+        client: "Gated Enclave Association",
+        scope: "Civil Structural Portals & Weather-Resistant Stone-Look Paint",
+        completion: "Delivered Ahead of Deadline",
+        highlights: "Monumental arch construction with integrated lighting conduits and masonry protection."
       }
     },
     {
       id: 6,
-      title: "Shree Daksha Luxury Residency",
-      location: "Vadavalli, Coimbatore",
-      description: "Exclusive gated villa community with premium acrylic weather-guard exterior finish.",
+      title: "Porte-cochere",
+      location: "Coimbatore",
+      description: "Decorative columns, jali finishing, and vehicle drop-off entrance structure.",
       status: "Completed",
-      photosCount: 16,
-      tags: ["Residential", "Exterior Painting"],
-      categories: ["all", "residential", "exterior"],
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=900&auto=format&fit=crop",
+      photosCount: 9,
+      tags: ["Gated communities", "Decorative"],
+      categories: ["all", "gated-communities"],
+      badge: "GATED COMMUNITY",
+      image: "/images/projects/porte-cochere-front.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/porte-cochere-front.jpg",
+        "/images/services/decorative-jali-finishing.jpg",
+        "/images/gallery/gated-community-03.jpg"
       ],
       details: {
-        client: "Shree Daksha Homes",
-        scope: "Elevation Exterior Painting & Texture Cornice Highlights",
-        completion: "Delivered with Distinction",
-        highlights: "Eco-friendly exterior coatings tested against monsoon rains."
+        client: "Luxury Community Club",
+        scope: "Architectural Column Finishing & Decorative Jali Detailing",
+        completion: "Completed on Schedule",
+        highlights: "Precision jali panel finishing with moisture-resistant PU coatings."
       }
     },
     {
       id: 7,
-      title: "Annapoorna Commercial Facility",
-      location: "Arasur, Coimbatore",
-      description: "High-rise commercial catering hub with hygienic antibacterial epoxy and interior painting.",
+      title: "Apartments with glass balconies",
+      location: "Coimbatore",
+      description: "Contemporary multi-storey apartments featuring sleek glass balconies and accent panels.",
       status: "Completed",
       photosCount: 11,
-      tags: ["Commercial", "Interior Painting", "Epoxy Flooring"],
-      categories: ["all", "commercial", "interior", "epoxy"],
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=900&auto=format&fit=crop",
+      tags: ["Apartments", "Modern Living"],
+      categories: ["all", "apartments"],
+      badge: "APARTMENTS",
+      image: "/images/projects/flats-glass-balconies.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/flats-glass-balconies.jpg",
+        "/images/gallery/apartments-05.jpg",
+        "/images/gallery/apartments-06.jpg"
       ],
       details: {
-        client: "Annapoorna Catering Corporation",
-        scope: "Food-Grade Anti-Bacterial Wall & Epoxy Floor Installations",
-        completion: "Certified ISO Standard Compliant",
-        highlights: "Zero VOC non-toxic food industry grade coating."
+        client: "Skyline Developers",
+        scope: "Exterior Emulsion & Balcony Protective Glaze Treatment",
+        completion: "Delivered on Time",
+        highlights: "Clean edge detailing against glass frames and metal railings."
       }
     },
     {
       id: 8,
-      title: "Aarthy Heritage Restorations",
-      location: "RS Puram, Coimbatore",
-      description: "Heritage residential bungalow with artisan lime plaster and antique texture painting.",
+      title: "Park sculpture",
+      location: "Coimbatore",
+      description: "Artistic globe statue and ornamental focal installation for community park.",
       status: "Completed",
-      photosCount: 9,
-      tags: ["Residential", "Texture & Decorative"],
-      categories: ["all", "residential", "texture"],
-      image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=900&auto=format&fit=crop",
+      photosCount: 7,
+      tags: ["Landscape", "Artistic Sculpture"],
+      categories: ["all"],
+      badge: "LANDSCAPE",
+      image: "/images/projects/sculpture-globe-statue.jpg",
       gallery: [
-        "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=900&auto=format&fit=crop"
+        "/images/projects/sculpture-globe-statue.jpg",
+        "/images/gallery/landscape-sculpture-01.jpg",
+        "/images/gallery/landscape-sculpture-02.jpg"
       ],
       details: {
-        client: "Aarthy Associates",
-        scope: "Architectural Restoration & Decorative Italian Stucco",
-        completion: "Completed with High Acclaim",
-        highlights: "Preserved original heritage architecture with modern breathable finishes."
+        client: "Township Parks & Recreation",
+        scope: "Sculptural Masonry, Thematic Finishing & Weather Sealing",
+        completion: "Delivered with Acclaim",
+        highlights: "All-weather anti-corrosion protective sealants for public art pieces."
       }
     }
   ];
@@ -696,7 +731,7 @@ export default function ProjectsSection({ onNavigatePage }) {
             top: 0,
             bottom: 0,
             width: '45%',
-            backgroundImage: 'url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop")',
+            backgroundImage: 'url("/images/hero/home-hero-alt-aerial-villas.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.18,
